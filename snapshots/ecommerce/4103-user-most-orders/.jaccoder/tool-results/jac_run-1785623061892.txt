@@ -1,0 +1,1412 @@
+Exit code: 1
+✖ Error: error[E0022]: Expected '{' after lambda parameters
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/ProductPage.cl.jac:64:45
+   62 |                         {[<button
+   63 |                             key={v["id"]}
+   64 |                             onClick={lambda _e: MouseEvent { selected_variant_id = v["id"]; }}
+      |                                             ^^
+   65 |                             className={"w-full text-left p-3 rounded-lg border transition-colors " + ("border-indigo-600 bg-indigo-50" if selected_variant_id == v["id"] else "border-gray-200 hover:border-gray-300")}
+   66 |                         >
+help: Lambda bodies are braced; a single expression statement is the implicit return, e.g. 'lambda (x: int) { x + 1; }'.
+✖ Error: error[E0002]: Missing '}'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/ProductPage.cl.jac:64:47
+   62 |                         {[<button
+   63 |                             key={v["id"]}
+   64 |                             onClick={lambda _e: MouseEvent { selected_variant_id = v["id"]; }}
+      |                                               ^
+   65 |                             className={"w-full text-left p-3 rounded-lg border transition-colors " + ("border-indigo-600 bg-indigo-50" if selected_variant_id == v["id"] else "border-gray-200 hover:border-gray-300")}
+   66 |                         >
+✖ Error: error[E0001]: Expected 'JSX_TAG_END', got ':'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/ProductPage.cl.jac:64:47
+   62 |                         {[<button
+   63 |                             key={v["id"]}
+   64 |                             onClick={lambda _e: MouseEvent { selected_variant_id = v["id"]; }}
+      |                                               ^
+   65 |                             className={"w-full text-left p-3 rounded-lg border transition-colors " + ("border-indigo-600 bg-indigo-50" if selected_variant_id == v["id"] else "border-gray-200 hover:border-gray-300")}
+   66 |                         >
+✖ Error: error[E0001]: Expected '</', got 'NAME'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/ProductPage.cl.jac:64:49
+   62 |                         {[<button
+   63 |                             key={v["id"]}
+   64 |                             onClick={lambda _e: MouseEvent { selected_variant_id = v["id"]; }}
+      |                                                 ^^^^^^^^^^
+   65 |                             className={"w-full text-left p-3 rounded-lg border transition-colors " + ("border-indigo-600 bg-indigo-50" if selected_variant_id == v["id"] else "border-gray-200 hover:border-gray-300")}
+   66 |                         >
+✖ Error: error[E0001]: Expected 'JSX_NAME', got '{'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/ProductPage.cl.jac:64:60
+   62 |                         {[<button
+   63 |                             key={v["id"]}
+   64 |                             onClick={lambda _e: MouseEvent { selected_variant_id = v["id"]; }}
+      |                                                            ^
+   65 |                             className={"w-full text-left p-3 rounded-lg border transition-colors " + ("border-indigo-600 bg-indigo-50" if selected_variant_id == v["id"] else "border-gray-200 hover:border-gray-300")}
+   66 |                         >
+✖ Error: error[E0001]: Expected 'JSX_TAG_END', got 'NAME'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/ProductPage.cl.jac:64:62
+   62 |                         {[<button
+   63 |                             key={v["id"]}
+   64 |                             onClick={lambda _e: MouseEvent { selected_variant_id = v["id"]; }}
+      |                                                              ^^^^^^^^^^^^^^^^^^^
+   65 |                             className={"w-full text-left p-3 rounded-lg border transition-colors " + ("border-indigo-600 bg-indigo-50" if selected_variant_id == v["id"] else "border-gray-200 hover:border-gray-300")}
+   66 |                         >
+✖ Error: error[E0002]: Missing ']'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/ProductPage.cl.jac:64:82
+   62 |                         {[<button
+   63 |                             key={v["id"]}
+   64 |                             onClick={lambda _e: MouseEvent { selected_variant_id = v["id"]; }}
+      |                                                                                  ^
+   65 |                             className={"w-full text-left p-3 rounded-lg border transition-colors " + ("border-indigo-600 bg-indigo-50" if selected_variant_id == v["id"] else "border-gray-200 hover:border-gray-300")}
+   66 |                         >
+✖ Error: error[E0002]: Missing '}'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/ProductPage.cl.jac:64:82
+   62 |                         {[<button
+   63 |                             key={v["id"]}
+   64 |                             onClick={lambda _e: MouseEvent { selected_variant_id = v["id"]; }}
+      |                                                                                  ^
+   65 |                             className={"w-full text-left p-3 rounded-lg border transition-colors " + ("border-indigo-600 bg-indigo-50" if selected_variant_id == v["id"] else "border-gray-200 hover:border-gray-300")}
+   66 |                         >
+✖ Error: error[E0001]: Expected '</', got '='
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/ProductPage.cl.jac:64:82
+   62 |                         {[<button
+   63 |                             key={v["id"]}
+   64 |                             onClick={lambda _e: MouseEvent { selected_variant_id = v["id"]; }}
+      |                                                                                  ^
+   65 |                             className={"w-full text-left p-3 rounded-lg border transition-colors " + ("border-indigo-600 bg-indigo-50" if selected_variant_id == v["id"] else "border-gray-200 hover:border-gray-300")}
+   66 |                         >
+✖ Error: error[E0001]: Expected 'JSX_NAME', got 'NAME'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/ProductPage.cl.jac:64:84
+   62 |                         {[<button
+   63 |                             key={v["id"]}
+   64 |                             onClick={lambda _e: MouseEvent { selected_variant_id = v["id"]; }}
+      |                                                                                    ^
+   65 |                             className={"w-full text-left p-3 rounded-lg border transition-colors " + ("border-indigo-600 bg-indigo-50" if selected_variant_id == v["id"] else "border-gray-200 hover:border-gray-300")}
+   66 |                         >
+✖ Error: error[E0001]: Expected 'JSX_TAG_END', got '['
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/ProductPage.cl.jac:64:85
+   62 |                         {[<button
+   63 |                             key={v["id"]}
+   64 |                             onClick={lambda _e: MouseEvent { selected_variant_id = v["id"]; }}
+      |                                                                                     ^
+   65 |                             className={"w-full text-left p-3 rounded-lg border transition-colors " + ("border-indigo-600 bg-indigo-50" if selected_variant_id == v["id"] else "border-gray-200 hover:border-gray-300")}
+   66 |                         >
+✖ Error: error[E0001]: Expected '</', got 'STRING'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/ProductPage.cl.jac:64:86
+   62 |                         {[<button
+   63 |                             key={v["id"]}
+   64 |                             onClick={lambda _e: MouseEvent { selected_variant_id = v["id"]; }}
+      |                                                                                      ^^^^
+   65 |                             className={"w-full text-left p-3 rounded-lg border transition-colors " + ("border-indigo-600 bg-indigo-50" if selected_variant_id == v["id"] else "border-gray-200 hover:border-gray-300")}
+   66 |                         >
+✖ Error: error[E0001]: Expected 'JSX_NAME', got ']'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/ProductPage.cl.jac:64:90
+   62 |                         {[<button
+   63 |                             key={v["id"]}
+   64 |                             onClick={lambda _e: MouseEvent { selected_variant_id = v["id"]; }}
+      |                                                                                          ^
+   65 |                             className={"w-full text-left p-3 rounded-lg border transition-colors " + ("border-indigo-600 bg-indigo-50" if selected_variant_id == v["id"] else "border-gray-200 hover:border-gray-300")}
+   66 |                         >
+✖ Error: error[E0001]: Expected 'JSX_TAG_END', got ';'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/ProductPage.cl.jac:64:91
+   62 |                         {[<button
+   63 |                             key={v["id"]}
+   64 |                             onClick={lambda _e: MouseEvent { selected_variant_id = v["id"]; }}
+      |                                                                                           ^
+   65 |                             className={"w-full text-left p-3 rounded-lg border transition-colors " + ("border-indigo-600 bg-indigo-50" if selected_variant_id == v["id"] else "border-gray-200 hover:border-gray-300")}
+   66 |                         >
+✖ Error: error[E0001]: Expected '</', got '}'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/ProductPage.cl.jac:64:93
+   62 |                         {[<button
+   63 |                             key={v["id"]}
+   64 |                             onClick={lambda _e: MouseEvent { selected_variant_id = v["id"]; }}
+      |                                                                                             ^
+   65 |                             className={"w-full text-left p-3 rounded-lg border transition-colors " + ("border-indigo-600 bg-indigo-50" if selected_variant_id == v["id"] else "border-gray-200 hover:border-gray-300")}
+   66 |                         >
+✖ Error: error[E0001]: Expected 'JSX_NAME', got '}'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/ProductPage.cl.jac:64:94
+   62 |                         {[<button
+   63 |                             key={v["id"]}
+   64 |                             onClick={lambda _e: MouseEvent { selected_variant_id = v["id"]; }}
+      |                                                                                              ^
+   65 |                             className={"w-full text-left p-3 rounded-lg border transition-colors " + ("border-indigo-600 bg-indigo-50" if selected_variant_id == v["id"] else "border-gray-200 hover:border-gray-300")}
+   66 |                         >
+✖ Error: error[E0001]: Expected 'JSX_TAG_END', got 'JSX_NAME'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/ProductPage.cl.jac:65:29
+   63 |                             key={v["id"]}
+   64 |                             onClick={lambda _e: MouseEvent { selected_variant_id = v["id"]; }}
+   65 |                             className={"w-full text-left p-3 rounded-lg border transition-colors " + ("border-indigo-600 bg-indigo-50" if selected_variant_id == v["id"] else "border-gray-200 hover:border-gray-300")}
+      |                             ^^^^^^^^^
+   66 |                         >
+   67 |                             <div className="flex items-center justify-between">
+✖ Error: error[E0001]: Expected '</', got '='
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/ProductPage.cl.jac:65:38
+   63 |                             key={v["id"]}
+   64 |                             onClick={lambda _e: MouseEvent { selected_variant_id = v["id"]; }}
+   65 |                             className={"w-full text-left p-3 rounded-lg border transition-colors " + ("border-indigo-600 bg-indigo-50" if selected_variant_id == v["id"] else "border-gray-200 hover:border-gray-300")}
+      |                                      ^
+   66 |                         >
+   67 |                             <div className="flex items-center justify-between">
+✖ Error: error[E0001]: Expected 'JSX_NAME', got '{'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/ProductPage.cl.jac:65:39
+   63 |                             key={v["id"]}
+   64 |                             onClick={lambda _e: MouseEvent { selected_variant_id = v["id"]; }}
+   65 |                             className={"w-full text-left p-3 rounded-lg border transition-colors " + ("border-indigo-600 bg-indigo-50" if selected_variant_id == v["id"] else "border-gray-200 hover:border-gray-300")}
+      |                                       ^
+   66 |                         >
+   67 |                             <div className="flex items-center justify-between">
+✖ Error: error[E0001]: Expected 'JSX_TAG_END', got 'STRING'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/ProductPage.cl.jac:65:40
+   63 |                             key={v["id"]}
+   64 |                             onClick={lambda _e: MouseEvent { selected_variant_id = v["id"]; }}
+   65 |                             className={"w-full text-left p-3 rounded-lg border transition-colors " + ("border-indigo-600 bg-indigo-50" if selected_variant_id == v["id"] else "border-gray-200 hover:border-gray-300")}
+      |                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   66 |                         >
+   67 |                             <div className="flex items-center justify-between">
+✖ Error: error[E0001]: Expected '</', got '+'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/ProductPage.cl.jac:65:100
+   63 |                             key={v["id"]}
+   64 |                             onClick={lambda _e: MouseEvent { selected_variant_id = v["id"]; }}
+   65 |                             className={"w-full text-left p-3 rounded-lg border transition-colors " + ("border-indigo-600 bg-indigo-50" if selected_variant_id == v["id"] else "border-gray-200 hover:border-gray-300")}
+      |                                                                                                    ^
+   66 |                         >
+   67 |                             <div className="flex items-center justify-between">
+✖ Error: error[E0001]: Expected 'JSX_NAME', got '('
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/ProductPage.cl.jac:65:102
+   63 |                             key={v["id"]}
+   64 |                             onClick={lambda _e: MouseEvent { selected_variant_id = v["id"]; }}
+   65 |                             className={"w-full text-left p-3 rounded-lg border transition-colors " + ("border-indigo-600 bg-indigo-50" if selected_variant_id == v["id"] else "border-gray-200 hover:border-gray-300")}
+      |                                                                                                      ^
+   66 |                         >
+   67 |                             <div className="flex items-center justify-between">
+✖ Error: error[E0001]: Expected 'JSX_TAG_END', got 'STRING'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/ProductPage.cl.jac:65:103
+   63 |                             key={v["id"]}
+   64 |                             onClick={lambda _e: MouseEvent { selected_variant_id = v["id"]; }}
+   65 |                             className={"w-full text-left p-3 rounded-lg border transition-colors " + ("border-indigo-600 bg-indigo-50" if selected_variant_id == v["id"] else "border-gray-200 hover:border-gray-300")}
+      |                                                                                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   66 |                         >
+   67 |                             <div className="flex items-center justify-between">
+✖ Error: error[E0002]: Missing ';'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/ProductPage.cl.jac:65:214
+   63 |                             key={v["id"]}
+   64 |                             onClick={lambda _e: MouseEvent { selected_variant_id = v["id"]; }}
+   65 |                             className={"w-full text-left p-3 rounded-lg border transition-colors " + ("border-indigo-600 bg-indigo-50" if selected_variant_id == v["id"] else "border-gray-200 hover:border-gray-300")}
+      |                                                                                                                                                                                                                      ^
+   66 |                         >
+   67 |                             <div className="flex items-center justify-between">
+✖ Error: error[E0004]: Unexpected token in expression: ')'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/ProductPage.cl.jac:65:214
+   63 |                             key={v["id"]}
+   64 |                             onClick={lambda _e: MouseEvent { selected_variant_id = v["id"]; }}
+   65 |                             className={"w-full text-left p-3 rounded-lg border transition-colors " + ("border-indigo-600 bg-indigo-50" if selected_variant_id == v["id"] else "border-gray-200 hover:border-gray-300")}
+      |                                                                                                                                                                                                                      ^
+   66 |                         >
+   67 |                             <div className="flex items-center justify-between">
+✖ Error: error[E0002]: Missing ';'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/ProductPage.cl.jac:65:215
+   63 |                             key={v["id"]}
+   64 |                             onClick={lambda _e: MouseEvent { selected_variant_id = v["id"]; }}
+   65 |                             className={"w-full text-left p-3 rounded-lg border transition-colors " + ("border-indigo-600 bg-indigo-50" if selected_variant_id == v["id"] else "border-gray-200 hover:border-gray-300")}
+      |                                                                                                                                                                                                                       ^
+   66 |                         >
+   67 |                             <div className="flex items-center justify-between">
+✖ Error: error[E0005]: Unexpected token '>'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/ProductPage.cl.jac:66:25
+   64 |                             onClick={lambda _e: MouseEvent { selected_variant_id = v["id"]; }}
+   65 |                             className={"w-full text-left p-3 rounded-lg border transition-colors " + ("border-indigo-600 bg-indigo-50" if selected_variant_id == v["id"] else "border-gray-200 hover:border-gray-300")}
+   66 |                         >
+      |                         ^
+   67 |                             <div className="flex items-center justify-between">
+   68 |                                 <div>
+✖ Error: error[E0005]: Unexpected token '}'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/ProductPage.cl.jac:70:72
+   68 |                                 <div>
+   69 |                                     <div className="text-sm font-medium text-gray-900">
+   70 |                                         {v["color"] + " · " + v["size"]}
+      |                                                                        ^
+   71 |                                     </div>
+   72 |                                     <div className="text-xs text-gray-500 mt-0.5">
+✖ Error: error[E0005]: Unexpected token '}'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/ProductPage.cl.jac:73:99
+   71 |                                     </div>
+   72 |                                     <div className="text-xs text-gray-500 mt-0.5">
+   73 |                                         {v["material"] + " · " + str(v["stock_qty"]) + " in stock"}
+      |                                                                                                   ^
+   74 |                                     </div>
+   75 |                                 </div>
+✖ Error: error[E0005]: Unexpected token '}'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/ProductPage.cl.jac:77:59
+   75 |                                 </div>
+   76 |                                 <span className="text-sm font-bold text-gray-900">
+   77 |                                     {"$" + str(v["price"])}
+      |                                                           ^
+   78 |                                 </span>
+   79 |                             </div>
+✖ Error: error[E0005]: Unexpected token 'for'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/ProductPage.cl.jac:80:35
+   78 |                                 </span>
+   79 |                             </div>
+   80 |                         </button> for v in product["variants"]]}
+      |                                   ^^^
+   81 |                     </div>
+   82 |                 </div>
+✖ Error: error[E0005]: Unexpected token '}'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/ProductPage.cl.jac:80:64
+   78 |                                 </span>
+   79 |                             </div>
+   80 |                         </button> for v in product["variants"]]}
+      |                                                                ^
+   81 |                     </div>
+   82 |                 </div>
+✖ Error: error[E0005]: Unexpected token '}'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/ProductPage.cl.jac:85:49
+   83 | 
+   84 |                 <button
+   85 |                     onClick={add_to_cart_handler}
+      |                                                 ^
+   86 |                     disabled={selected_variant_id == ""}
+   87 |                     className="w-full mt-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+✖ Error: error[E0005]: Unexpected token '}'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/ProductPage.cl.jac:86:56
+   84 |                 <button
+   85 |                     onClick={add_to_cart_handler}
+   86 |                     disabled={selected_variant_id == ""}
+      |                                                        ^
+   87 |                     className="w-full mt-6 py-3 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+   88 |                 >
+✖ Error: error[E0005]: Unexpected token '}'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/ProductPage.cl.jac:91:82
+   89 |                     Add to Cart
+   90 |                 </button>
+   91 |                 {(<p className="mt-3 text-sm text-center text-gray-700">{feedback}</p>) if feedback else None}
+      |                                                                                  ^
+   92 |             </div>
+   93 |         </div>
+✖ Error: error[E0005]: Unexpected token 'if'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/ProductPage.cl.jac:91:89
+   89 |                     Add to Cart
+   90 |                 </button>
+   91 |                 {(<p className="mt-3 text-sm text-center text-gray-700">{feedback}</p>) if feedback else None}
+      |                                                                                         ^^
+   92 |             </div>
+   93 |         </div>
+✖ Error: error[E0005]: Unexpected token '}'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/ProductPage.cl.jac:91:110
+   89 |                     Add to Cart
+   90 |                 </button>
+   91 |                 {(<p className="mt-3 text-sm text-center text-gray-700">{feedback}</p>) if feedback else None}
+      |                                                                                                              ^
+   92 |             </div>
+   93 |         </div>
+✖ Error: error[E0030]: Unexpected semicolon at module level
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/ProductPage.cl.jac:94:11
+   92 |             </div>
+   93 |         </div>
+   94 |     </div>;
+      |           ^
+   95 | }
+   96 | 
+✖ Error: error[E0005]: Unexpected token '}'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/ProductPage.cl.jac:95:1
+   93 |         </div>
+   94 |     </div>;
+   95 | }
+      | ^
+   96 | 
+✖ Error: error[E0022]: Expected '{' after lambda parameters
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/CartPage.cl.jac:71:45
+   69 |                     <div className="flex items-center gap-2">
+   70 |                         <button
+   71 |                             onClick={lambda _e: MouseEvent { update_qty(item["id"], item["quantity"] - 1); }}
+      |                                             ^^
+   72 |                             className="w-8 h-8 rounded border border-gray-300 hover:bg-gray-50 text-gray-600"
+   73 |                         >−</button>
+help: Lambda bodies are braced; a single expression statement is the implicit return, e.g. 'lambda (x: int) { x + 1; }'.
+✖ Error: error[E0002]: Missing '}'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/CartPage.cl.jac:71:47
+   69 |                     <div className="flex items-center gap-2">
+   70 |                         <button
+   71 |                             onClick={lambda _e: MouseEvent { update_qty(item["id"], item["quantity"] - 1); }}
+      |                                               ^
+   72 |                             className="w-8 h-8 rounded border border-gray-300 hover:bg-gray-50 text-gray-600"
+   73 |                         >−</button>
+✖ Error: error[E0001]: Expected 'JSX_TAG_END', got ':'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/CartPage.cl.jac:71:47
+   69 |                     <div className="flex items-center gap-2">
+   70 |                         <button
+   71 |                             onClick={lambda _e: MouseEvent { update_qty(item["id"], item["quantity"] - 1); }}
+      |                                               ^
+   72 |                             className="w-8 h-8 rounded border border-gray-300 hover:bg-gray-50 text-gray-600"
+   73 |                         >−</button>
+✖ Error: error[E0001]: Expected '</', got 'NAME'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/CartPage.cl.jac:71:49
+   69 |                     <div className="flex items-center gap-2">
+   70 |                         <button
+   71 |                             onClick={lambda _e: MouseEvent { update_qty(item["id"], item["quantity"] - 1); }}
+      |                                                 ^^^^^^^^^^
+   72 |                             className="w-8 h-8 rounded border border-gray-300 hover:bg-gray-50 text-gray-600"
+   73 |                         >−</button>
+✖ Error: error[E0001]: Expected 'JSX_NAME', got '{'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/CartPage.cl.jac:71:60
+   69 |                     <div className="flex items-center gap-2">
+   70 |                         <button
+   71 |                             onClick={lambda _e: MouseEvent { update_qty(item["id"], item["quantity"] - 1); }}
+      |                                                            ^
+   72 |                             className="w-8 h-8 rounded border border-gray-300 hover:bg-gray-50 text-gray-600"
+   73 |                         >−</button>
+✖ Error: error[E0001]: Expected 'JSX_TAG_END', got 'NAME'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/CartPage.cl.jac:71:62
+   69 |                     <div className="flex items-center gap-2">
+   70 |                         <button
+   71 |                             onClick={lambda _e: MouseEvent { update_qty(item["id"], item["quantity"] - 1); }}
+      |                                                              ^^^^^^^^^^
+   72 |                             className="w-8 h-8 rounded border border-gray-300 hover:bg-gray-50 text-gray-600"
+   73 |                         >−</button>
+✖ Error: error[E0001]: Expected '</', got '('
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/CartPage.cl.jac:71:72
+   69 |                     <div className="flex items-center gap-2">
+   70 |                         <button
+   71 |                             onClick={lambda _e: MouseEvent { update_qty(item["id"], item["quantity"] - 1); }}
+      |                                                                        ^
+   72 |                             className="w-8 h-8 rounded border border-gray-300 hover:bg-gray-50 text-gray-600"
+   73 |                         >−</button>
+✖ Error: error[E0001]: Expected 'JSX_NAME', got 'NAME'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/CartPage.cl.jac:71:73
+   69 |                     <div className="flex items-center gap-2">
+   70 |                         <button
+   71 |                             onClick={lambda _e: MouseEvent { update_qty(item["id"], item["quantity"] - 1); }}
+      |                                                                         ^^^^
+   72 |                             className="w-8 h-8 rounded border border-gray-300 hover:bg-gray-50 text-gray-600"
+   73 |                         >−</button>
+✖ Error: error[E0001]: Expected 'JSX_TAG_END', got '['
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/CartPage.cl.jac:71:77
+   69 |                     <div className="flex items-center gap-2">
+   70 |                         <button
+   71 |                             onClick={lambda _e: MouseEvent { update_qty(item["id"], item["quantity"] - 1); }}
+      |                                                                             ^
+   72 |                             className="w-8 h-8 rounded border border-gray-300 hover:bg-gray-50 text-gray-600"
+   73 |                         >−</button>
+✖ Error: error[E0001]: Expected '</', got 'STRING'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/CartPage.cl.jac:71:78
+   69 |                     <div className="flex items-center gap-2">
+   70 |                         <button
+   71 |                             onClick={lambda _e: MouseEvent { update_qty(item["id"], item["quantity"] - 1); }}
+      |                                                                              ^^^^
+   72 |                             className="w-8 h-8 rounded border border-gray-300 hover:bg-gray-50 text-gray-600"
+   73 |                         >−</button>
+✖ Error: error[E0001]: Expected 'JSX_NAME', got ']'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/CartPage.cl.jac:71:82
+   69 |                     <div className="flex items-center gap-2">
+   70 |                         <button
+   71 |                             onClick={lambda _e: MouseEvent { update_qty(item["id"], item["quantity"] - 1); }}
+      |                                                                                  ^
+   72 |                             className="w-8 h-8 rounded border border-gray-300 hover:bg-gray-50 text-gray-600"
+   73 |                         >−</button>
+✖ Error: error[E0001]: Expected 'JSX_TAG_END', got ','
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/CartPage.cl.jac:71:83
+   69 |                     <div className="flex items-center gap-2">
+   70 |                         <button
+   71 |                             onClick={lambda _e: MouseEvent { update_qty(item["id"], item["quantity"] - 1); }}
+      |                                                                                   ^
+   72 |                             className="w-8 h-8 rounded border border-gray-300 hover:bg-gray-50 text-gray-600"
+   73 |                         >−</button>
+✖ Error: error[E0002]: Missing ']'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/CartPage.cl.jac:71:85
+   69 |                     <div className="flex items-center gap-2">
+   70 |                         <button
+   71 |                             onClick={lambda _e: MouseEvent { update_qty(item["id"], item["quantity"] - 1); }}
+      |                                                                                     ^^^^
+   72 |                             className="w-8 h-8 rounded border border-gray-300 hover:bg-gray-50 text-gray-600"
+   73 |                         >−</button>
+✖ Error: error[E0002]: Missing '}'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/CartPage.cl.jac:71:85
+   69 |                     <div className="flex items-center gap-2">
+   70 |                         <button
+   71 |                             onClick={lambda _e: MouseEvent { update_qty(item["id"], item["quantity"] - 1); }}
+      |                                                                                     ^^^^
+   72 |                             className="w-8 h-8 rounded border border-gray-300 hover:bg-gray-50 text-gray-600"
+   73 |                         >−</button>
+✖ Error: error[E0001]: Expected '</', got 'NAME'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/CartPage.cl.jac:71:85
+   69 |                     <div className="flex items-center gap-2">
+   70 |                         <button
+   71 |                             onClick={lambda _e: MouseEvent { update_qty(item["id"], item["quantity"] - 1); }}
+      |                                                                                     ^^^^
+   72 |                             className="w-8 h-8 rounded border border-gray-300 hover:bg-gray-50 text-gray-600"
+   73 |                         >−</button>
+✖ Error: error[E0001]: Expected 'JSX_NAME', got '['
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/CartPage.cl.jac:71:89
+   69 |                     <div className="flex items-center gap-2">
+   70 |                         <button
+   71 |                             onClick={lambda _e: MouseEvent { update_qty(item["id"], item["quantity"] - 1); }}
+      |                                                                                         ^
+   72 |                             className="w-8 h-8 rounded border border-gray-300 hover:bg-gray-50 text-gray-600"
+   73 |                         >−</button>
+✖ Error: error[E0001]: Expected 'JSX_TAG_END', got 'STRING'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/CartPage.cl.jac:71:90
+   69 |                     <div className="flex items-center gap-2">
+   70 |                         <button
+   71 |                             onClick={lambda _e: MouseEvent { update_qty(item["id"], item["quantity"] - 1); }}
+      |                                                                                          ^^^^^^^^^^
+   72 |                             className="w-8 h-8 rounded border border-gray-300 hover:bg-gray-50 text-gray-600"
+   73 |                         >−</button>
+✖ Error: error[E0001]: Expected '</', got ']'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/CartPage.cl.jac:71:100
+   69 |                     <div className="flex items-center gap-2">
+   70 |                         <button
+   71 |                             onClick={lambda _e: MouseEvent { update_qty(item["id"], item["quantity"] - 1); }}
+      |                                                                                                    ^
+   72 |                             className="w-8 h-8 rounded border border-gray-300 hover:bg-gray-50 text-gray-600"
+   73 |                         >−</button>
+✖ Error: error[E0001]: Expected 'JSX_NAME', got '-'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/CartPage.cl.jac:71:102
+   69 |                     <div className="flex items-center gap-2">
+   70 |                         <button
+   71 |                             onClick={lambda _e: MouseEvent { update_qty(item["id"], item["quantity"] - 1); }}
+      |                                                                                                      ^
+   72 |                             className="w-8 h-8 rounded border border-gray-300 hover:bg-gray-50 text-gray-600"
+   73 |                         >−</button>
+✖ Error: error[E0001]: Expected 'JSX_TAG_END', got 'INT'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/CartPage.cl.jac:71:104
+   69 |                     <div className="flex items-center gap-2">
+   70 |                         <button
+   71 |                             onClick={lambda _e: MouseEvent { update_qty(item["id"], item["quantity"] - 1); }}
+      |                                                                                                        ^
+   72 |                             className="w-8 h-8 rounded border border-gray-300 hover:bg-gray-50 text-gray-600"
+   73 |                         >−</button>
+✖ Error: error[E0001]: Expected '</', got '}'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/CartPage.cl.jac:71:109
+   69 |                     <div className="flex items-center gap-2">
+   70 |                         <button
+   71 |                             onClick={lambda _e: MouseEvent { update_qty(item["id"], item["quantity"] - 1); }}
+      |                                                                                                             ^
+   72 |                             className="w-8 h-8 rounded border border-gray-300 hover:bg-gray-50 text-gray-600"
+   73 |                         >−</button>
+✖ Error: error[E0001]: Expected 'JSX_TAG_END', got '='
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/CartPage.cl.jac:72:38
+   70 |                         <button
+   71 |                             onClick={lambda _e: MouseEvent { update_qty(item["id"], item["quantity"] - 1); }}
+   72 |                             className="w-8 h-8 rounded border border-gray-300 hover:bg-gray-50 text-gray-600"
+      |                                      ^
+   73 |                         >−</button>
+   74 |                         <span className="w-8 text-center text-sm font-medium">{item["quantity"]}</span>
+✖ Error: error[E0002]: Missing ';'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/CartPage.cl.jac:72:39
+   70 |                         <button
+   71 |                             onClick={lambda _e: MouseEvent { update_qty(item["id"], item["quantity"] - 1); }}
+   72 |                             className="w-8 h-8 rounded border border-gray-300 hover:bg-gray-50 text-gray-600"
+      |                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   73 |                         >−</button>
+   74 |                         <span className="w-8 text-center text-sm font-medium">{item["quantity"]}</span>
+✖ Error: error[E0002]: Missing ';'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/CartPage.cl.jac:73:25
+   71 |                             onClick={lambda _e: MouseEvent { update_qty(item["id"], item["quantity"] - 1); }}
+   72 |                             className="w-8 h-8 rounded border border-gray-300 hover:bg-gray-50 text-gray-600"
+   73 |                         >−</button>
+      |                         ^
+   74 |                         <span className="w-8 text-center text-sm font-medium">{item["quantity"]}</span>
+   75 |                         <button
+✖ Error: error[E0004]: Unexpected token in expression: 'JSX_TAG_END'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/CartPage.cl.jac:73:25
+   71 |                             onClick={lambda _e: MouseEvent { update_qty(item["id"], item["quantity"] - 1); }}
+   72 |                             className="w-8 h-8 rounded border border-gray-300 hover:bg-gray-50 text-gray-600"
+   73 |                         >−</button>
+      |                         ^
+   74 |                         <span className="w-8 text-center text-sm font-medium">{item["quantity"]}</span>
+   75 |                         <button
+✖ Error: error[E0002]: Missing ';'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/CartPage.cl.jac:73:26
+   71 |                             onClick={lambda _e: MouseEvent { update_qty(item["id"], item["quantity"] - 1); }}
+   72 |                             className="w-8 h-8 rounded border border-gray-300 hover:bg-gray-50 text-gray-600"
+   73 |                         >−</button>
+      |                          ^
+   74 |                         <span className="w-8 text-center text-sm font-medium">{item["quantity"]}</span>
+   75 |                         <button
+✖ Error: error[E0004]: Unexpected token in expression: 'JSX_TEXT'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/CartPage.cl.jac:73:26
+   71 |                             onClick={lambda _e: MouseEvent { update_qty(item["id"], item["quantity"] - 1); }}
+   72 |                             className="w-8 h-8 rounded border border-gray-300 hover:bg-gray-50 text-gray-600"
+   73 |                         >−</button>
+      |                          ^
+   74 |                         <span className="w-8 text-center text-sm font-medium">{item["quantity"]}</span>
+   75 |                         <button
+✖ Error: error[E0002]: Missing ';'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/CartPage.cl.jac:73:27
+   71 |                             onClick={lambda _e: MouseEvent { update_qty(item["id"], item["quantity"] - 1); }}
+   72 |                             className="w-8 h-8 rounded border border-gray-300 hover:bg-gray-50 text-gray-600"
+   73 |                         >−</button>
+      |                           ^^
+   74 |                         <span className="w-8 text-center text-sm font-medium">{item["quantity"]}</span>
+   75 |                         <button
+✖ Error: error[E0004]: Unexpected token in expression: '</'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/CartPage.cl.jac:73:27
+   71 |                             onClick={lambda _e: MouseEvent { update_qty(item["id"], item["quantity"] - 1); }}
+   72 |                             className="w-8 h-8 rounded border border-gray-300 hover:bg-gray-50 text-gray-600"
+   73 |                         >−</button>
+      |                           ^^
+   74 |                         <span className="w-8 text-center text-sm font-medium">{item["quantity"]}</span>
+   75 |                         <button
+✖ Error: error[E0002]: Missing ';'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/CartPage.cl.jac:73:29
+   71 |                             onClick={lambda _e: MouseEvent { update_qty(item["id"], item["quantity"] - 1); }}
+   72 |                             className="w-8 h-8 rounded border border-gray-300 hover:bg-gray-50 text-gray-600"
+   73 |                         >−</button>
+      |                             ^^^^^^
+   74 |                         <span className="w-8 text-center text-sm font-medium">{item["quantity"]}</span>
+   75 |                         <button
+✖ Error: error[E0004]: Unexpected token in expression: 'JSX_NAME'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/CartPage.cl.jac:73:29
+   71 |                             onClick={lambda _e: MouseEvent { update_qty(item["id"], item["quantity"] - 1); }}
+   72 |                             className="w-8 h-8 rounded border border-gray-300 hover:bg-gray-50 text-gray-600"
+   73 |                         >−</button>
+      |                             ^^^^^^
+   74 |                         <span className="w-8 text-center text-sm font-medium">{item["quantity"]}</span>
+   75 |                         <button
+✖ Error: error[E0002]: Missing ';'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/CartPage.cl.jac:73:35
+   71 |                             onClick={lambda _e: MouseEvent { update_qty(item["id"], item["quantity"] - 1); }}
+   72 |                             className="w-8 h-8 rounded border border-gray-300 hover:bg-gray-50 text-gray-600"
+   73 |                         >−</button>
+      |                                   ^
+   74 |                         <span className="w-8 text-center text-sm font-medium">{item["quantity"]}</span>
+   75 |                         <button
+✖ Error: error[E0004]: Unexpected token in expression: 'JSX_TAG_END'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/CartPage.cl.jac:73:35
+   71 |                             onClick={lambda _e: MouseEvent { update_qty(item["id"], item["quantity"] - 1); }}
+   72 |                             className="w-8 h-8 rounded border border-gray-300 hover:bg-gray-50 text-gray-600"
+   73 |                         >−</button>
+      |                                   ^
+   74 |                         <span className="w-8 text-center text-sm font-medium">{item["quantity"]}</span>
+   75 |                         <button
+✖ Error: error[E0002]: Missing ';'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/CartPage.cl.jac:73:36
+   71 |                             onClick={lambda _e: MouseEvent { update_qty(item["id"], item["quantity"] - 1); }}
+   72 |                             className="w-8 h-8 rounded border border-gray-300 hover:bg-gray-50 text-gray-600"
+   73 |                         >−</button>
+      |                                    ^^^^^^^^^^^^^^^^^^^^^^^^^
+   74 |                         <span className="w-8 text-center text-sm font-medium">{item["quantity"]}</span>
+   75 |                         <button
+✖ Error: error[E0004]: Unexpected token in expression: 'JSX_TEXT'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/CartPage.cl.jac:73:36
+   71 |                             onClick={lambda _e: MouseEvent { update_qty(item["id"], item["quantity"] - 1); }}
+   72 |                             className="w-8 h-8 rounded border border-gray-300 hover:bg-gray-50 text-gray-600"
+   73 |                         >−</button>
+      |                                    ^^^^^^^^^^^^^^^^^^^^^^^^^
+   74 |                         <span className="w-8 text-center text-sm font-medium">{item["quantity"]}</span>
+   75 |                         <button
+✖ Error: error[E0002]: Missing ';'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/CartPage.cl.jac:74:25
+   72 |                             className="w-8 h-8 rounded border border-gray-300 hover:bg-gray-50 text-gray-600"
+   73 |                         >−</button>
+   74 |                         <span className="w-8 text-center text-sm font-medium">{item["quantity"]}</span>
+      |                         ^
+   75 |                         <button
+   76 |                             onClick={lambda _e: MouseEvent { update_qty(item["id"], item["quantity"] + 1); }}
+✖ Error: error[E0002]: Missing ';'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/CartPage.cl.jac:74:104
+   72 |                             className="w-8 h-8 rounded border border-gray-300 hover:bg-gray-50 text-gray-600"
+   73 |                         >−</button>
+   74 |                         <span className="w-8 text-center text-sm font-medium">{item["quantity"]}</span>
+      |                                                                                                        ^^^^^^^^^^^^^^^^^^^^^^^^^
+   75 |                         <button
+   76 |                             onClick={lambda _e: MouseEvent { update_qty(item["id"], item["quantity"] + 1); }}
+✖ Error: error[E0004]: Unexpected token in expression: 'JSX_TEXT'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/CartPage.cl.jac:74:104
+   72 |                             className="w-8 h-8 rounded border border-gray-300 hover:bg-gray-50 text-gray-600"
+   73 |                         >−</button>
+   74 |                         <span className="w-8 text-center text-sm font-medium">{item["quantity"]}</span>
+      |                                                                                                        ^^^^^^^^^^^^^^^^^^^^^^^^^
+   75 |                         <button
+   76 |                             onClick={lambda _e: MouseEvent { update_qty(item["id"], item["quantity"] + 1); }}
+✖ Error: error[E0002]: Missing ';'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/CartPage.cl.jac:75:25
+   73 |                         >−</button>
+   74 |                         <span className="w-8 text-center text-sm font-medium">{item["quantity"]}</span>
+   75 |                         <button
+      |                         ^
+   76 |                             onClick={lambda _e: MouseEvent { update_qty(item["id"], item["quantity"] + 1); }}
+   77 |                             className="w-8 h-8 rounded border border-gray-300 hover:bg-gray-50 text-gray-600"
+✖ Error: error[E0022]: Expected '{' after lambda parameters
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/CartPage.cl.jac:76:45
+   74 |                         <span className="w-8 text-center text-sm font-medium">{item["quantity"]}</span>
+   75 |                         <button
+   76 |                             onClick={lambda _e: MouseEvent { update_qty(item["id"], item["quantity"] + 1); }}
+      |                                             ^^
+   77 |                             className="w-8 h-8 rounded border border-gray-300 hover:bg-gray-50 text-gray-600"
+   78 |                         >+</button>
+help: Lambda bodies are braced; a single expression statement is the implicit return, e.g. 'lambda (x: int) { x + 1; }'.
+✖ Error: error[E0002]: Missing '}'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/CartPage.cl.jac:76:47
+   74 |                         <span className="w-8 text-center text-sm font-medium">{item["quantity"]}</span>
+   75 |                         <button
+   76 |                             onClick={lambda _e: MouseEvent { update_qty(item["id"], item["quantity"] + 1); }}
+      |                                               ^
+   77 |                             className="w-8 h-8 rounded border border-gray-300 hover:bg-gray-50 text-gray-600"
+   78 |                         >+</button>
+✖ Error: error[E0001]: Expected 'JSX_TAG_END', got ':'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/CartPage.cl.jac:76:47
+   74 |                         <span className="w-8 text-center text-sm font-medium">{item["quantity"]}</span>
+   75 |                         <button
+   76 |                             onClick={lambda _e: MouseEvent { update_qty(item["id"], item["quantity"] + 1); }}
+      |                                               ^
+   77 |                             className="w-8 h-8 rounded border border-gray-300 hover:bg-gray-50 text-gray-600"
+   78 |                         >+</button>
+✖ Error: error[E0001]: Expected '</', got 'NAME'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/CartPage.cl.jac:76:49
+   74 |                         <span className="w-8 text-center text-sm font-medium">{item["quantity"]}</span>
+   75 |                         <button
+   76 |                             onClick={lambda _e: MouseEvent { update_qty(item["id"], item["quantity"] + 1); }}
+      |                                                 ^^^^^^^^^^
+   77 |                             className="w-8 h-8 rounded border border-gray-300 hover:bg-gray-50 text-gray-600"
+   78 |                         >+</button>
+✖ Error: error[E0001]: Expected 'JSX_NAME', got '{'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/CartPage.cl.jac:76:60
+   74 |                         <span className="w-8 text-center text-sm font-medium">{item["quantity"]}</span>
+   75 |                         <button
+   76 |                             onClick={lambda _e: MouseEvent { update_qty(item["id"], item["quantity"] + 1); }}
+      |                                                            ^
+   77 |                             className="w-8 h-8 rounded border border-gray-300 hover:bg-gray-50 text-gray-600"
+   78 |                         >+</button>
+✖ Error: error[E0001]: Expected 'JSX_TAG_END', got 'NAME'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/CartPage.cl.jac:76:62
+   74 |                         <span className="w-8 text-center text-sm font-medium">{item["quantity"]}</span>
+   75 |                         <button
+   76 |                             onClick={lambda _e: MouseEvent { update_qty(item["id"], item["quantity"] + 1); }}
+      |                                                              ^^^^^^^^^^
+   77 |                             className="w-8 h-8 rounded border border-gray-300 hover:bg-gray-50 text-gray-600"
+   78 |                         >+</button>
+✖ Error: error[E0005]: Unexpected token '}'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/CartPage.cl.jac:76:109
+   74 |                         <span className="w-8 text-center text-sm font-medium">{item["quantity"]}</span>
+   75 |                         <button
+   76 |                             onClick={lambda _e: MouseEvent { update_qty(item["id"], item["quantity"] + 1); }}
+      |                                                                                                             ^
+   77 |                             className="w-8 h-8 rounded border border-gray-300 hover:bg-gray-50 text-gray-600"
+   78 |                         >+</button>
+✖ Error: error[E0030]: Unexpected semicolon at module level
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/CartPage.cl.jac:81:81
+   79 |                     </div>
+   80 |                     <button
+   81 |                         onClick={lambda _e: MouseEvent { remove_item(item["id"]); }}
+      |                                                                                 ^
+   82 |                         className="text-gray-400 hover:text-red-600 text-sm"
+   83 |                     >Remove</button>
+✖ Error: error[E0005]: Unexpected token '}'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/CartPage.cl.jac:81:83
+   79 |                     </div>
+   80 |                     <button
+   81 |                         onClick={lambda _e: MouseEvent { remove_item(item["id"]); }}
+      |                                                                                   ^
+   82 |                         className="text-gray-400 hover:text-red-600 text-sm"
+   83 |                     >Remove</button>
+✖ Error: error[E0005]: Unexpected token '}'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/CartPage.cl.jac:81:84
+   79 |                     </div>
+   80 |                     <button
+   81 |                         onClick={lambda _e: MouseEvent { remove_item(item["id"]); }}
+      |                                                                                    ^
+   82 |                         className="text-gray-400 hover:text-red-600 text-sm"
+   83 |                     >Remove</button>
+✖ Error: error[E0005]: Unexpected token 'for'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/CartPage.cl.jac:84:24
+   82 |                         className="text-gray-400 hover:text-red-600 text-sm"
+   83 |                     >Remove</button>
+   84 |                 </div> for item in items]}
+      |                        ^^^
+   85 |             </div>
+   86 | 
+✖ Error: error[E0005]: Unexpected token '}'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/CartPage.cl.jac:84:42
+   82 |                         className="text-gray-400 hover:text-red-600 text-sm"
+   83 |                     >Remove</button>
+   84 |                 </div> for item in items]}
+      |                                          ^
+   85 |             </div>
+   86 | 
+✖ Error: error[E0005]: Unexpected token '}'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/CartPage.cl.jac:90:96
+   88 |                 <div>
+   89 |                     <div className="text-sm text-gray-600">Total</div>
+   90 |                     <div className="text-2xl font-bold text-gray-900">{"$" + str(cart["total"])}</div>
+      |                                                                                                ^
+   91 |                 </div>
+   92 |                 <button
+✖ Error: error[E0005]: Unexpected token '}'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/CartPage.cl.jac:93:41
+   91 |                 </div>
+   92 |                 <button
+   93 |                     onClick={do_checkout}
+      |                                         ^
+   94 |                     disabled={checking_out}
+   95 |                     className="px-6 py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-lg transition-colors disabled:opacity-50"
+✖ Error: error[E0005]: Unexpected token '}'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/CartPage.cl.jac:94:43
+   92 |                 <button
+   93 |                     onClick={do_checkout}
+   94 |                     disabled={checking_out}
+      |                                           ^
+   95 |                     className="px-6 py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-lg transition-colors disabled:opacity-50"
+   96 |                 >
+✖ Error: error[E0005]: Unexpected token 'if'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/CartPage.cl.jac:97:39
+   95 |                     className="px-6 py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-lg transition-colors disabled:opacity-50"
+   96 |                 >
+   97 |                     {("Processing..." if checking_out else "Checkout")}
+      |                                       ^^
+   98 |                 </button>
+   99 |             </div>
+✖ Error: error[E0005]: Unexpected token '}'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/CartPage.cl.jac:97:71
+   95 |                     className="px-6 py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-lg transition-colors disabled:opacity-50"
+   96 |                 >
+   97 |                     {("Processing..." if checking_out else "Checkout")}
+      |                                                                       ^
+   98 |                 </button>
+   99 |             </div>
+✖ Error: error[E0005]: Unexpected token '}'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/CartPage.cl.jac:100:77
+   98 |                 </button>
+   99 |             </div>
+  100 |             {(<p className="mt-3 text-sm text-center text-red-600">{feedback}</p>) if feedback else None}
+      |                                                                             ^
+  101 |         </div>) if len(items) > 0 else None}
+  102 |     </div>;
+✖ Error: error[E0005]: Unexpected token 'if'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/CartPage.cl.jac:100:84
+   98 |                 </button>
+   99 |             </div>
+  100 |             {(<p className="mt-3 text-sm text-center text-red-600">{feedback}</p>) if feedback else None}
+      |                                                                                    ^^
+  101 |         </div>) if len(items) > 0 else None}
+  102 |     </div>;
+✖ Error: error[E0005]: Unexpected token '}'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/CartPage.cl.jac:100:105
+   98 |                 </button>
+   99 |             </div>
+  100 |             {(<p className="mt-3 text-sm text-center text-red-600">{feedback}</p>) if feedback else None}
+      |                                                                                                         ^
+  101 |         </div>) if len(items) > 0 else None}
+  102 |     </div>;
+✖ Error: error[E0005]: Unexpected token 'if'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/CartPage.cl.jac:101:17
+   99 |             </div>
+  100 |             {(<p className="mt-3 text-sm text-center text-red-600">{feedback}</p>) if feedback else None}
+  101 |         </div>) if len(items) > 0 else None}
+      |                 ^^
+  102 |     </div>;
+  103 | }
+✖ Error: error[E0005]: Unexpected token '}'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/CartPage.cl.jac:101:44
+   99 |             </div>
+  100 |             {(<p className="mt-3 text-sm text-center text-red-600">{feedback}</p>) if feedback else None}
+  101 |         </div>) if len(items) > 0 else None}
+      |                                            ^
+  102 |     </div>;
+  103 | }
+✖ Error: error[E0030]: Unexpected semicolon at module level
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/CartPage.cl.jac:102:11
+  100 |             {(<p className="mt-3 text-sm text-center text-red-600">{feedback}</p>) if feedback else None}
+  101 |         </div>) if len(items) > 0 else None}
+  102 |     </div>;
+      |           ^
+  103 | }
+  104 | 
+✖ Error: error[E0005]: Unexpected token '}'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/CartPage.cl.jac:103:1
+  101 |         </div>) if len(items) > 0 else None}
+  102 |     </div>;
+  103 | }
+      | ^
+  104 | 
+✖ Error: error[E0022]: Expected '{' after lambda parameters
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/OrdersPage.cl.jac:49:45
+   47 |                         </span>
+   48 |                         {(<button
+   49 |                             onClick={lambda _e: MouseEvent { do_cancel(o["id"]); }}
+      |                                             ^^
+   50 |                             className="text-xs text-red-600 hover:text-red-700 hover:underline"
+   51 |                         >Cancel</button>) if o["status"] in ["pending", "processed"] else None}
+help: Lambda bodies are braced; a single expression statement is the implicit return, e.g. 'lambda (x: int) { x + 1; }'.
+✖ Error: error[E0002]: Missing '}'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/OrdersPage.cl.jac:49:47
+   47 |                         </span>
+   48 |                         {(<button
+   49 |                             onClick={lambda _e: MouseEvent { do_cancel(o["id"]); }}
+      |                                               ^
+   50 |                             className="text-xs text-red-600 hover:text-red-700 hover:underline"
+   51 |                         >Cancel</button>) if o["status"] in ["pending", "processed"] else None}
+✖ Error: error[E0001]: Expected 'JSX_TAG_END', got ':'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/OrdersPage.cl.jac:49:47
+   47 |                         </span>
+   48 |                         {(<button
+   49 |                             onClick={lambda _e: MouseEvent { do_cancel(o["id"]); }}
+      |                                               ^
+   50 |                             className="text-xs text-red-600 hover:text-red-700 hover:underline"
+   51 |                         >Cancel</button>) if o["status"] in ["pending", "processed"] else None}
+✖ Error: error[E0001]: Expected '</', got 'NAME'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/OrdersPage.cl.jac:49:49
+   47 |                         </span>
+   48 |                         {(<button
+   49 |                             onClick={lambda _e: MouseEvent { do_cancel(o["id"]); }}
+      |                                                 ^^^^^^^^^^
+   50 |                             className="text-xs text-red-600 hover:text-red-700 hover:underline"
+   51 |                         >Cancel</button>) if o["status"] in ["pending", "processed"] else None}
+✖ Error: error[E0001]: Expected 'JSX_NAME', got '{'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/OrdersPage.cl.jac:49:60
+   47 |                         </span>
+   48 |                         {(<button
+   49 |                             onClick={lambda _e: MouseEvent { do_cancel(o["id"]); }}
+      |                                                            ^
+   50 |                             className="text-xs text-red-600 hover:text-red-700 hover:underline"
+   51 |                         >Cancel</button>) if o["status"] in ["pending", "processed"] else None}
+✖ Error: error[E0001]: Expected 'JSX_TAG_END', got 'NAME'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/OrdersPage.cl.jac:49:62
+   47 |                         </span>
+   48 |                         {(<button
+   49 |                             onClick={lambda _e: MouseEvent { do_cancel(o["id"]); }}
+      |                                                              ^^^^^^^^^
+   50 |                             className="text-xs text-red-600 hover:text-red-700 hover:underline"
+   51 |                         >Cancel</button>) if o["status"] in ["pending", "processed"] else None}
+✖ Error: error[E0002]: Missing ')'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/OrdersPage.cl.jac:49:80
+   47 |                         </span>
+   48 |                         {(<button
+   49 |                             onClick={lambda _e: MouseEvent { do_cancel(o["id"]); }}
+      |                                                                                ^
+   50 |                             className="text-xs text-red-600 hover:text-red-700 hover:underline"
+   51 |                         >Cancel</button>) if o["status"] in ["pending", "processed"] else None}
+✖ Error: error[E0001]: Expected '</', got '}'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/OrdersPage.cl.jac:49:83
+   47 |                         </span>
+   48 |                         {(<button
+   49 |                             onClick={lambda _e: MouseEvent { do_cancel(o["id"]); }}
+      |                                                                                   ^
+   50 |                             className="text-xs text-red-600 hover:text-red-700 hover:underline"
+   51 |                         >Cancel</button>) if o["status"] in ["pending", "processed"] else None}
+✖ Error: error[E0001]: Expected 'JSX_TAG_END', got '='
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/OrdersPage.cl.jac:50:38
+   48 |                         {(<button
+   49 |                             onClick={lambda _e: MouseEvent { do_cancel(o["id"]); }}
+   50 |                             className="text-xs text-red-600 hover:text-red-700 hover:underline"
+      |                                      ^
+   51 |                         >Cancel</button>) if o["status"] in ["pending", "processed"] else None}
+   52 |                     </div>
+✖ Error: error[E0001]: Expected '</', got 'STRING'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/OrdersPage.cl.jac:50:39
+   48 |                         {(<button
+   49 |                             onClick={lambda _e: MouseEvent { do_cancel(o["id"]); }}
+   50 |                             className="text-xs text-red-600 hover:text-red-700 hover:underline"
+      |                                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   51 |                         >Cancel</button>) if o["status"] in ["pending", "processed"] else None}
+   52 |                     </div>
+✖ Error: error[E0001]: Expected 'JSX_NAME', got 'JSX_TAG_END'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/OrdersPage.cl.jac:51:25
+   49 |                             onClick={lambda _e: MouseEvent { do_cancel(o["id"]); }}
+   50 |                             className="text-xs text-red-600 hover:text-red-700 hover:underline"
+   51 |                         >Cancel</button>) if o["status"] in ["pending", "processed"] else None}
+      |                         ^
+   52 |                     </div>
+   53 |                 </div>
+✖ Error: error[E0001]: Expected 'JSX_TAG_END', got 'JSX_TEXT'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/OrdersPage.cl.jac:51:26
+   49 |                             onClick={lambda _e: MouseEvent { do_cancel(o["id"]); }}
+   50 |                             className="text-xs text-red-600 hover:text-red-700 hover:underline"
+   51 |                         >Cancel</button>) if o["status"] in ["pending", "processed"] else None}
+      |                          ^^^^^^
+   52 |                     </div>
+   53 |                 </div>
+✖ Error: error[E0002]: Missing ']'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/OrdersPage.cl.jac:51:41
+   49 |                             onClick={lambda _e: MouseEvent { do_cancel(o["id"]); }}
+   50 |                             className="text-xs text-red-600 hover:text-red-700 hover:underline"
+   51 |                         >Cancel</button>) if o["status"] in ["pending", "processed"] else None}
+      |                                         ^
+   52 |                     </div>
+   53 |                 </div>
+✖ Error: error[E0002]: Missing '}'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/OrdersPage.cl.jac:51:41
+   49 |                             onClick={lambda _e: MouseEvent { do_cancel(o["id"]); }}
+   50 |                             className="text-xs text-red-600 hover:text-red-700 hover:underline"
+   51 |                         >Cancel</button>) if o["status"] in ["pending", "processed"] else None}
+      |                                         ^
+   52 |                     </div>
+   53 |                 </div>
+✖ Error: error[E0001]: Expected '</', got ')'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/OrdersPage.cl.jac:51:41
+   49 |                             onClick={lambda _e: MouseEvent { do_cancel(o["id"]); }}
+   50 |                             className="text-xs text-red-600 hover:text-red-700 hover:underline"
+   51 |                         >Cancel</button>) if o["status"] in ["pending", "processed"] else None}
+      |                                         ^
+   52 |                     </div>
+   53 |                 </div>
+✖ Error: error[E0001]: Expected 'JSX_NAME', got 'if'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/OrdersPage.cl.jac:51:43
+   49 |                             onClick={lambda _e: MouseEvent { do_cancel(o["id"]); }}
+   50 |                             className="text-xs text-red-600 hover:text-red-700 hover:underline"
+   51 |                         >Cancel</button>) if o["status"] in ["pending", "processed"] else None}
+      |                                           ^^
+   52 |                     </div>
+   53 |                 </div>
+✖ Error: error[E0001]: Expected 'JSX_TAG_END', got 'NAME'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/OrdersPage.cl.jac:51:46
+   49 |                             onClick={lambda _e: MouseEvent { do_cancel(o["id"]); }}
+   50 |                             className="text-xs text-red-600 hover:text-red-700 hover:underline"
+   51 |                         >Cancel</button>) if o["status"] in ["pending", "processed"] else None}
+      |                                              ^
+   52 |                     </div>
+   53 |                 </div>
+✖ Error: error[E0001]: Expected '</', got '['
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/OrdersPage.cl.jac:51:47
+   49 |                             onClick={lambda _e: MouseEvent { do_cancel(o["id"]); }}
+   50 |                             className="text-xs text-red-600 hover:text-red-700 hover:underline"
+   51 |                         >Cancel</button>) if o["status"] in ["pending", "processed"] else None}
+      |                                               ^
+   52 |                     </div>
+   53 |                 </div>
+✖ Error: error[E0001]: Expected 'JSX_NAME', got 'STRING'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/OrdersPage.cl.jac:51:48
+   49 |                             onClick={lambda _e: MouseEvent { do_cancel(o["id"]); }}
+   50 |                             className="text-xs text-red-600 hover:text-red-700 hover:underline"
+   51 |                         >Cancel</button>) if o["status"] in ["pending", "processed"] else None}
+      |                                                ^^^^^^^^
+   52 |                     </div>
+   53 |                 </div>
+✖ Error: error[E0001]: Expected 'JSX_TAG_END', got ']'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/OrdersPage.cl.jac:51:56
+   49 |                             onClick={lambda _e: MouseEvent { do_cancel(o["id"]); }}
+   50 |                             className="text-xs text-red-600 hover:text-red-700 hover:underline"
+   51 |                         >Cancel</button>) if o["status"] in ["pending", "processed"] else None}
+      |                                                        ^
+   52 |                     </div>
+   53 |                 </div>
+✖ Error: error[E0002]: Missing ';'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/OrdersPage.cl.jac:51:86
+   49 |                             onClick={lambda _e: MouseEvent { do_cancel(o["id"]); }}
+   50 |                             className="text-xs text-red-600 hover:text-red-700 hover:underline"
+   51 |                         >Cancel</button>) if o["status"] in ["pending", "processed"] else None}
+      |                                                                                      ^^^^
+   52 |                     </div>
+   53 |                 </div>
+✖ Error: error[E0032]: Unexpected 'else' -- must follow its parent statement (if/try/match/switch)
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/OrdersPage.cl.jac:51:86
+   49 |                             onClick={lambda _e: MouseEvent { do_cancel(o["id"]); }}
+   50 |                             className="text-xs text-red-600 hover:text-red-700 hover:underline"
+   51 |                         >Cancel</button>) if o["status"] in ["pending", "processed"] else None}
+      |                                                                                      ^^^^
+   52 |                     </div>
+   53 |                 </div>
+✖ Error: error[E0002]: Missing ';'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/OrdersPage.cl.jac:51:95
+   49 |                             onClick={lambda _e: MouseEvent { do_cancel(o["id"]); }}
+   50 |                             className="text-xs text-red-600 hover:text-red-700 hover:underline"
+   51 |                         >Cancel</button>) if o["status"] in ["pending", "processed"] else None}
+      |                                                                                               ^
+   52 |                     </div>
+   53 |                 </div>
+✖ Error: error[E0005]: Unexpected token '
+                    '
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/OrdersPage.cl.jac:51:96
+   49 |                             onClick={lambda _e: MouseEvent { do_cancel(o["id"]); }}
+   50 |                             className="text-xs text-red-600 hover:text-red-700 hover:underline"
+   51 |                         >Cancel</button>) if o["status"] in ["pending", "processed"] else None}
+      |                                                                                                ^^^^^^^^^^^^^^^^^^^^^
+   52 |                     </div>
+   53 |                 </div>
+✖ Error: error[E0005]: Unexpected token 'for'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/OrdersPage.cl.jac:54:20
+   52 |                     </div>
+   53 |                 </div>
+   54 |             </div> for o in orders]}
+      |                    ^^^
+   55 |         </div>
+   56 |     </div>;
+✖ Error: error[E0005]: Unexpected token '}'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/OrdersPage.cl.jac:54:36
+   52 |                     </div>
+   53 |                 </div>
+   54 |             </div> for o in orders]}
+      |                                    ^
+   55 |         </div>
+   56 |     </div>;
+✖ Error: error[E0030]: Unexpected semicolon at module level
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/OrdersPage.cl.jac:56:11
+   54 |             </div> for o in orders]}
+   55 |         </div>
+   56 |     </div>;
+      |           ^
+   57 | }
+   58 | 
+✖ Error: error[E0005]: Unexpected token '}'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/OrdersPage.cl.jac:57:1
+   55 |         </div>
+   56 |     </div>;
+   57 | }
+      | ^
+   58 | 
+✖ Error: error[E0022]: Expected '{' after lambda parameters
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/SearchPage.cl.jac:30:34
+   28 |                 type="text"
+   29 |                 value={query}
+   30 |                 onChange={lambda e: ChangeEvent { query = e.target.value; }}
+      |                                  ^
+   31 |                 placeholder="Try 'shirt', 'coffee', 'wireless'..."
+   32 |                 className="flex-1 px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:border-indigo-600 focus:ring-2 focus:ring-indigo-100"
+help: Lambda bodies are braced; a single expression statement is the implicit return, e.g. 'lambda (x: int) { x + 1; }'.
+✖ Error: error[E0002]: Missing '}'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/SearchPage.cl.jac:30:35
+   28 |                 type="text"
+   29 |                 value={query}
+   30 |                 onChange={lambda e: ChangeEvent { query = e.target.value; }}
+      |                                   ^
+   31 |                 placeholder="Try 'shirt', 'coffee', 'wireless'..."
+   32 |                 className="flex-1 px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:border-indigo-600 focus:ring-2 focus:ring-indigo-100"
+✖ Error: error[E0001]: Expected 'JSX_TAG_END', got ':'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/SearchPage.cl.jac:30:35
+   28 |                 type="text"
+   29 |                 value={query}
+   30 |                 onChange={lambda e: ChangeEvent { query = e.target.value; }}
+      |                                   ^
+   31 |                 placeholder="Try 'shirt', 'coffee', 'wireless'..."
+   32 |                 className="flex-1 px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:border-indigo-600 focus:ring-2 focus:ring-indigo-100"
+✖ Error: error[E0001]: Expected '</', got 'NAME'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/SearchPage.cl.jac:30:37
+   28 |                 type="text"
+   29 |                 value={query}
+   30 |                 onChange={lambda e: ChangeEvent { query = e.target.value; }}
+      |                                     ^^^^^^^^^^^
+   31 |                 placeholder="Try 'shirt', 'coffee', 'wireless'..."
+   32 |                 className="flex-1 px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:border-indigo-600 focus:ring-2 focus:ring-indigo-100"
+✖ Error: error[E0001]: Expected 'JSX_NAME', got '{'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/SearchPage.cl.jac:30:49
+   28 |                 type="text"
+   29 |                 value={query}
+   30 |                 onChange={lambda e: ChangeEvent { query = e.target.value; }}
+      |                                                 ^
+   31 |                 placeholder="Try 'shirt', 'coffee', 'wireless'..."
+   32 |                 className="flex-1 px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:border-indigo-600 focus:ring-2 focus:ring-indigo-100"
+✖ Error: error[E0001]: Expected 'JSX_TAG_END', got 'NAME'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/SearchPage.cl.jac:30:51
+   28 |                 type="text"
+   29 |                 value={query}
+   30 |                 onChange={lambda e: ChangeEvent { query = e.target.value; }}
+      |                                                   ^^^^^
+   31 |                 placeholder="Try 'shirt', 'coffee', 'wireless'..."
+   32 |                 className="flex-1 px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:border-indigo-600 focus:ring-2 focus:ring-indigo-100"
+✖ Error: error[E0001]: Expected '</', got '='
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/SearchPage.cl.jac:30:57
+   28 |                 type="text"
+   29 |                 value={query}
+   30 |                 onChange={lambda e: ChangeEvent { query = e.target.value; }}
+      |                                                         ^
+   31 |                 placeholder="Try 'shirt', 'coffee', 'wireless'..."
+   32 |                 className="flex-1 px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:border-indigo-600 focus:ring-2 focus:ring-indigo-100"
+✖ Error: error[E0001]: Expected 'JSX_NAME', got 'NAME'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/SearchPage.cl.jac:30:59
+   28 |                 type="text"
+   29 |                 value={query}
+   30 |                 onChange={lambda e: ChangeEvent { query = e.target.value; }}
+      |                                                           ^
+   31 |                 placeholder="Try 'shirt', 'coffee', 'wireless'..."
+   32 |                 className="flex-1 px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:border-indigo-600 focus:ring-2 focus:ring-indigo-100"
+✖ Error: error[E0001]: Expected 'JSX_NAME', got 'NAME'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/SearchPage.cl.jac:30:61
+   28 |                 type="text"
+   29 |                 value={query}
+   30 |                 onChange={lambda e: ChangeEvent { query = e.target.value; }}
+      |                                                             ^^^^^^
+   31 |                 placeholder="Try 'shirt', 'coffee', 'wireless'..."
+   32 |                 className="flex-1 px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:border-indigo-600 focus:ring-2 focus:ring-indigo-100"
+✖ Error: error[E0001]: Expected 'JSX_NAME', got 'NAME'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/SearchPage.cl.jac:30:68
+   28 |                 type="text"
+   29 |                 value={query}
+   30 |                 onChange={lambda e: ChangeEvent { query = e.target.value; }}
+      |                                                                    ^^^^^
+   31 |                 placeholder="Try 'shirt', 'coffee', 'wireless'..."
+   32 |                 className="flex-1 px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:border-indigo-600 focus:ring-2 focus:ring-indigo-100"
+✖ Error: error[E0001]: Expected 'JSX_TAG_END', got ';'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/SearchPage.cl.jac:30:73
+   28 |                 type="text"
+   29 |                 value={query}
+   30 |                 onChange={lambda e: ChangeEvent { query = e.target.value; }}
+      |                                                                         ^
+   31 |                 placeholder="Try 'shirt', 'coffee', 'wireless'..."
+   32 |                 className="flex-1 px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:border-indigo-600 focus:ring-2 focus:ring-indigo-100"
+✖ Error: error[E0001]: Expected '</', got '}'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/SearchPage.cl.jac:30:75
+   28 |                 type="text"
+   29 |                 value={query}
+   30 |                 onChange={lambda e: ChangeEvent { query = e.target.value; }}
+      |                                                                           ^
+   31 |                 placeholder="Try 'shirt', 'coffee', 'wireless'..."
+   32 |                 className="flex-1 px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:border-indigo-600 focus:ring-2 focus:ring-indigo-100"
+✖ Error: error[E0001]: Expected 'JSX_NAME', got '}'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/SearchPage.cl.jac:30:76
+   28 |                 type="text"
+   29 |                 value={query}
+   30 |                 onChange={lambda e: ChangeEvent { query = e.target.value; }}
+      |                                                                            ^
+   31 |                 placeholder="Try 'shirt', 'coffee', 'wireless'..."
+   32 |                 className="flex-1 px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:border-indigo-600 focus:ring-2 focus:ring-indigo-100"
+✖ Error: error[E0001]: Expected 'JSX_TAG_END', got 'JSX_NAME'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/SearchPage.cl.jac:31:17
+   29 |                 value={query}
+   30 |                 onChange={lambda e: ChangeEvent { query = e.target.value; }}
+   31 |                 placeholder="Try 'shirt', 'coffee', 'wireless'..."
+      |                 ^^^^^^^^^^^
+   32 |                 className="flex-1 px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:border-indigo-600 focus:ring-2 focus:ring-indigo-100"
+   33 |             />
+✖ Error: error[E0002]: Missing ';'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/SearchPage.cl.jac:31:28
+   29 |                 value={query}
+   30 |                 onChange={lambda e: ChangeEvent { query = e.target.value; }}
+   31 |                 placeholder="Try 'shirt', 'coffee', 'wireless'..."
+      |                            ^
+   32 |                 className="flex-1 px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:border-indigo-600 focus:ring-2 focus:ring-indigo-100"
+   33 |             />
+✖ Error: error[E0004]: Unexpected token in expression: '='
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/SearchPage.cl.jac:31:28
+   29 |                 value={query}
+   30 |                 onChange={lambda e: ChangeEvent { query = e.target.value; }}
+   31 |                 placeholder="Try 'shirt', 'coffee', 'wireless'..."
+      |                            ^
+   32 |                 className="flex-1 px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:border-indigo-600 focus:ring-2 focus:ring-indigo-100"
+   33 |             />
+✖ Error: error[E0002]: Missing ';'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/SearchPage.cl.jac:31:29
+   29 |                 value={query}
+   30 |                 onChange={lambda e: ChangeEvent { query = e.target.value; }}
+   31 |                 placeholder="Try 'shirt', 'coffee', 'wireless'..."
+      |                             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   32 |                 className="flex-1 px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:border-indigo-600 focus:ring-2 focus:ring-indigo-100"
+   33 |             />
+✖ Error: error[E0002]: Missing ';'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/SearchPage.cl.jac:32:17
+   30 |                 onChange={lambda e: ChangeEvent { query = e.target.value; }}
+   31 |                 placeholder="Try 'shirt', 'coffee', 'wireless'..."
+   32 |                 className="flex-1 px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:border-indigo-600 focus:ring-2 focus:ring-indigo-100"
+      |                 ^^^^^^^^^
+   33 |             />
+   34 |             <button
+✖ Error: error[E0004]: Unexpected token in expression: 'JSX_NAME'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/SearchPage.cl.jac:32:17
+   30 |                 onChange={lambda e: ChangeEvent { query = e.target.value; }}
+   31 |                 placeholder="Try 'shirt', 'coffee', 'wireless'..."
+   32 |                 className="flex-1 px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:border-indigo-600 focus:ring-2 focus:ring-indigo-100"
+      |                 ^^^^^^^^^
+   33 |             />
+   34 |             <button
+✖ Error: error[E0002]: Missing ';'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/SearchPage.cl.jac:33:13
+   31 |                 placeholder="Try 'shirt', 'coffee', 'wireless'..."
+   32 |                 className="flex-1 px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:border-indigo-600 focus:ring-2 focus:ring-indigo-100"
+   33 |             />
+      |             ^^
+   34 |             <button
+   35 |                 type="submit"
+✖ Error: error[E0004]: Unexpected token in expression: '/>'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/SearchPage.cl.jac:33:13
+   31 |                 placeholder="Try 'shirt', 'coffee', 'wireless'..."
+   32 |                 className="flex-1 px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:border-indigo-600 focus:ring-2 focus:ring-indigo-100"
+   33 |             />
+      |             ^^
+   34 |             <button
+   35 |                 type="submit"
+✖ Error: error[E0002]: Missing ';'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/SearchPage.cl.jac:33:15
+   31 |                 placeholder="Try 'shirt', 'coffee', 'wireless'..."
+   32 |                 className="flex-1 px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:border-indigo-600 focus:ring-2 focus:ring-indigo-100"
+   33 |             />
+      |               ^^^^^^^^^^^^^
+   34 |             <button
+   35 |                 type="submit"
+✖ Error: error[E0004]: Unexpected token in expression: 'JSX_TEXT'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/SearchPage.cl.jac:33:15
+   31 |                 placeholder="Try 'shirt', 'coffee', 'wireless'..."
+   32 |                 className="flex-1 px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:border-indigo-600 focus:ring-2 focus:ring-indigo-100"
+   33 |             />
+      |               ^^^^^^^^^^^^^
+   34 |             <button
+   35 |                 type="submit"
+✖ Error: error[E0002]: Missing ';'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/SearchPage.cl.jac:34:13
+   32 |                 className="flex-1 px-4 py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:border-indigo-600 focus:ring-2 focus:ring-indigo-100"
+   33 |             />
+   34 |             <button
+      |             ^
+   35 |                 type="submit"
+   36 |                 className="px-6 py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold rounded-lg"
+✖ Error: error[E0002]: Missing ';'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/SearchPage.cl.jac:39:22
+   37 |             >
+   38 |                 Search
+   39 |             </button>
+      |                      ^^^^^^^^^
+   40 |         </form>
+   41 | 
+✖ Error: error[E0004]: Unexpected token in expression: 'JSX_TEXT'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/SearchPage.cl.jac:39:22
+   37 |             >
+   38 |                 Search
+   39 |             </button>
+      |                      ^^^^^^^^^
+   40 |         </form>
+   41 | 
+✖ Error: error[E0002]: Missing ';'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/SearchPage.cl.jac:40:9
+   38 |                 Search
+   39 |             </button>
+   40 |         </form>
+      |         ^^
+   41 | 
+   42 |         {(<p className="text-gray-500">Searching...</p>) if searching else None}
+✖ Error: error[E0004]: Unexpected token in expression: '</'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/SearchPage.cl.jac:40:9
+   38 |                 Search
+   39 |             </button>
+   40 |         </form>
+      |         ^^
+   41 | 
+   42 |         {(<p className="text-gray-500">Searching...</p>) if searching else None}
+✖ Error: error[E0002]: Missing ';'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/SearchPage.cl.jac:40:11
+   38 |                 Search
+   39 |             </button>
+   40 |         </form>
+      |           ^^^^
+   41 | 
+   42 |         {(<p className="text-gray-500">Searching...</p>) if searching else None}
+✖ Error: error[E0004]: Unexpected token in expression: 'JSX_NAME'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/SearchPage.cl.jac:40:11
+   38 |                 Search
+   39 |             </button>
+   40 |         </form>
+      |           ^^^^
+   41 | 
+   42 |         {(<p className="text-gray-500">Searching...</p>) if searching else None}
+✖ Error: error[E0002]: Missing ';'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/SearchPage.cl.jac:40:15
+   38 |                 Search
+   39 |             </button>
+   40 |         </form>
+      |               ^
+   41 | 
+   42 |         {(<p className="text-gray-500">Searching...</p>) if searching else None}
+✖ Error: error[E0004]: Unexpected token in expression: 'JSX_TAG_END'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/SearchPage.cl.jac:40:15
+   38 |                 Search
+   39 |             </button>
+   40 |         </form>
+      |               ^
+   41 | 
+   42 |         {(<p className="text-gray-500">Searching...</p>) if searching else None}
+✖ Error: error[E0002]: Missing ';'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/SearchPage.cl.jac:40:16
+   38 |                 Search
+   39 |             </button>
+   40 |         </form>
+      |                ^^^^^^^^^^
+   41 | 
+   42 |         {(<p className="text-gray-500">Searching...</p>) if searching else None}
+✖ Error: error[E0004]: Unexpected token in expression: 'JSX_TEXT'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/SearchPage.cl.jac:40:16
+   38 |                 Search
+   39 |             </button>
+   40 |         </form>
+      |                ^^^^^^^^^^
+   41 | 
+   42 |         {(<p className="text-gray-500">Searching...</p>) if searching else None}
+✖ Error: error[E0002]: Missing ';'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/SearchPage.cl.jac:42:9
+   40 |         </form>
+   41 | 
+   42 |         {(<p className="text-gray-500">Searching...</p>) if searching else None}
+      |         ^
+   43 |         {(<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+   44 |             {[<ProductCard key={p["id"]} product={p} /> for p in results]}
+✖ Error: error[E0002]: Missing ';'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/SearchPage.cl.jac:42:81
+   40 |         </form>
+   41 | 
+   42 |         {(<p className="text-gray-500">Searching...</p>) if searching else None}
+      |                                                                                 ^^^^^^^^^
+   43 |         {(<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+   44 |             {[<ProductCard key={p["id"]} product={p} /> for p in results]}
+✖ Error: error[E0004]: Unexpected token in expression: 'JSX_TEXT'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/SearchPage.cl.jac:42:81
+   40 |         </form>
+   41 | 
+   42 |         {(<p className="text-gray-500">Searching...</p>) if searching else None}
+      |                                                                                 ^^^^^^^^^
+   43 |         {(<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+   44 |             {[<ProductCard key={p["id"]} product={p} /> for p in results]}
+✖ Error: error[E0002]: Missing ';'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/SearchPage.cl.jac:43:9
+   41 | 
+   42 |         {(<p className="text-gray-500">Searching...</p>) if searching else None}
+   43 |         {(<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      |         ^
+   44 |             {[<ProductCard key={p["id"]} product={p} /> for p in results]}
+   45 |         </div>) if len(results) > 0 else None}
+✖ Error: error[E0002]: Missing ';'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/SearchPage.cl.jac:45:47
+   43 |         {(<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+   44 |             {[<ProductCard key={p["id"]} product={p} /> for p in results]}
+   45 |         </div>) if len(results) > 0 else None}
+      |                                               ^^^^^
+   46 |     </div>;
+   47 | }
+✖ Error: error[E0004]: Unexpected token in expression: 'JSX_TEXT'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/SearchPage.cl.jac:45:47
+   43 |         {(<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+   44 |             {[<ProductCard key={p["id"]} product={p} /> for p in results]}
+   45 |         </div>) if len(results) > 0 else None}
+      |                                               ^^^^^
+   46 |     </div>;
+   47 | }
+✖ Error: error[E0002]: Missing ';'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/SearchPage.cl.jac:46:5
+   44 |             {[<ProductCard key={p["id"]} product={p} /> for p in results]}
+   45 |         </div>) if len(results) > 0 else None}
+   46 |     </div>;
+      |     ^^
+   47 | }
+   48 | 
+✖ Error: error[E0004]: Unexpected token in expression: '</'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/SearchPage.cl.jac:46:5
+   44 |             {[<ProductCard key={p["id"]} product={p} /> for p in results]}
+   45 |         </div>) if len(results) > 0 else None}
+   46 |     </div>;
+      |     ^^
+   47 | }
+   48 | 
+✖ Error: error[E0002]: Missing ';'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/SearchPage.cl.jac:46:7
+   44 |             {[<ProductCard key={p["id"]} product={p} /> for p in results]}
+   45 |         </div>) if len(results) > 0 else None}
+   46 |     </div>;
+      |       ^^^
+   47 | }
+   48 | 
+✖ Error: error[E0004]: Unexpected token in expression: 'JSX_NAME'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/SearchPage.cl.jac:46:7
+   44 |             {[<ProductCard key={p["id"]} product={p} /> for p in results]}
+   45 |         </div>) if len(results) > 0 else None}
+   46 |     </div>;
+      |       ^^^
+   47 | }
+   48 | 
+✖ Error: error[E0002]: Missing ';'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/SearchPage.cl.jac:46:10
+   44 |             {[<ProductCard key={p["id"]} product={p} /> for p in results]}
+   45 |         </div>) if len(results) > 0 else None}
+   46 |     </div>;
+      |          ^
+   47 | }
+   48 | 
+✖ Error: error[E0004]: Unexpected token in expression: 'JSX_TAG_END'
+  --> /tmp/snapshots_ecommerce/4103-user-most-orders/pages/SearchPage.cl.jac:46:10
+   44 |             {[<ProductCard key={p["id"]} product={p} /> for p in results]}
+   45 |         </div>) if len(results) > 0 else None}
+   46 |     </div>;
+      |          ^
+   47 | }
+   48 |
