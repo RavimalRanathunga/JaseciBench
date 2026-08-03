@@ -1,0 +1,118 @@
+{
+  "schema_version": "1",
+  "ui": {
+    "app_type": "ecommerce",
+    "nav_pattern": "topnav",
+    "pages": [
+      {
+        "name": "CatalogPage",
+        "route": "/",
+        "title": "Catalog | Jac E-Commerce"
+      },
+      {
+        "name": "ProductPage",
+        "route": "/product/:product_id",
+        "title": "Product | Jac E-Commerce"
+      },
+      {
+        "name": "CartPage",
+        "route": "/cart",
+        "title": "Cart | Jac E-Commerce"
+      },
+      {
+        "name": "OrdersPage",
+        "route": "/orders",
+        "title": "Orders | Jac E-Commerce"
+      },
+      {
+        "name": "SearchPage",
+        "route": "/search",
+        "title": "Search | Jac E-Commerce"
+      }
+    ],
+    "primitive_components": [
+      "button",
+      "card",
+      "badge",
+      "input",
+      "table",
+      "separator",
+      "dropdown-menu",
+      "navigation-menu",
+      "field",
+      "label",
+      "select",
+      "textarea",
+      "dialog",
+      "sonner"
+    ],
+    "style": "nova",
+    "base_color": "neutral",
+    "theme": "indigo",
+    "font": "inter",
+    "radius": "medium",
+    "menu_accent": "subtle",
+    "auth_required": false,
+    "backend_required": true,
+    "ai_required": false
+  },
+  "files": [
+    {
+      "path": "services/orders.sv.jac",
+      "layer": "service",
+      "purpose": "Add def:pub user_with_most_orders() endpoint that returns the user_id with the highest order count.",
+      "exports": [
+        "list_orders",
+        "get_order",
+        "cancel_order",
+        "return_items",
+        "modify_order_items",
+        "update_order_address",
+        "update_order_status",
+        "user_with_most_orders"
+      ],
+      "imports_from_plan": [
+        "Order"
+      ],
+      "write_order": 1,
+      "status": "done"
+    },
+    {
+      "path": "main.jac",
+      "layer": "shell",
+      "purpose": "Existing manual router and app entry point (unchanged for this backend-only feature).",
+      "exports": [
+        "app"
+      ],
+      "imports_from_plan": [
+        "user_with_most_orders"
+      ],
+      "write_order": 2,
+      "status": "done"
+    }
+  ],
+  "write_order": [
+    "services/orders.sv.jac",
+    "main.jac"
+  ],
+  "dependency_graph": {
+    "services/orders.sv.jac": [],
+    "main.jac": [
+      "services/orders.sv.jac"
+    ]
+  },
+  "remove_from_template": [],
+  "verify": {
+    "flow": "user_with_most_orders",
+    "route": "/",
+    "steps": "Call the user_with_most_orders endpoint; it returns a non-empty user_id string corresponding to a user who has the most orders (ties allowed)."
+  },
+  "build_log": {
+    "overall_status": "pending",
+    "last_action": "",
+    "issues": [],
+    "learnings": []
+  },
+  "confidence": 0.74,
+  "assumption": "Orders are stored as Order nodes under root and include a user_id field; counting these is sufficient to determine the user with the most orders."
+}

@@ -1,0 +1,906 @@
+  Checking main.jac...
+main.jac ok [25%]
+  Checking services/cart.sv.jac...
+services/cart.sv.jac ok [50%]
+  Checking pages/CartPage.cl.jac...
+pages/CartPage.cl.jac ok [75%]
+  Checking pages/ProductPage.cl.jac...
+pages/ProductPage.cl.jac FAILED [100%]
+
+=================================== FAILURES ===================================
+___________________________________ main.jac ___________________________________
+
+_____________________________ services/cart.sv.jac _____________________________
+  → run 'jac guide jac-types' for guidance
+  → run 'jac guide jac-types' for guidance
+  → run 'jac guide jac-types' for guidance
+  → run 'jac guide jac-types' for guidance
+  → run 'jac guide jac-types' for guidance
+  → run 'jac guide jac-types' for guidance
+  → run 'jac guide jac-types' for guidance
+
+____________________________ pages/CartPage.cl.jac _____________________________
+  → run 'jac guide jac-types' for guidance
+  → run 'jac guide jac-types' for guidance
+  → run 'jac guide jac-types' for guidance
+  → run 'jac guide jac-types' for guidance
+  → run 'jac guide jac-types' for guidance
+  → run 'jac guide jac-types' for guidance
+  → run 'jac guide jac-types' for guidance
+  → run 'jac guide jac-types' for guidance
+  → run 'jac guide jac-types' for guidance
+  → run 'jac guide jac-types' for guidance
+  → run 'jac guide jac-types' for guidance
+  → run 'jac guide jac-types' for guidance
+  → run 'jac guide jac-types' for guidance
+  → run 'jac guide jac-types' for guidance
+  → run 'jac guide jac-types' for guidance
+  → run 'jac guide jac-types' for guidance
+  → run 'jac guide jac-types' for guidance
+  → run 'jac guide jac-types' for guidance
+  → run 'jac guide jac-types' for guidance
+  → run 'jac guide jac-types' for guidance
+  → run 'jac guide jac-types' for guidance
+  → run 'jac guide jac-types' for guidance
+  → run 'jac guide jac-types' for guidance
+
+___________________________ pages/ProductPage.cl.jac ___________________________
+  → run 'jac guide jac-types' for guidance
+  → run 'jac guide jac-types' for guidance
+  → run 'jac guide jac-types' for guidance
+  → run 'jac guide jac-types' for guidance
+  → run 'jac guide jac-types' for guidance
+  → run 'jac guide jac-types' for guidance
+  → run 'jac guide jac-types' for guidance
+  → run 'jac guide jac-types' for guidance
+  → run 'jac guide jac-types' for guidance
+  → run 'jac guide jac-types' for guidance
+  → run 'jac guide jac-types' for guidance
+  → run 'jac guide jac-types' for guidance
+  → run 'jac guide jac-types' for guidance
+  → run 'jac guide jac-types' for guidance
+  → run 'jac guide jac-types' for guidance
+  → run 'jac guide jac-types' for guidance
+  → run 'jac guide jac-types' for guidance
+  → run 'jac guide jac-types' for guidance
+  → run 'jac guide jac-types' for guidance
+  → run 'jac guide jac-types' for guidance
+  → run 'jac guide jac-types' for guidance
+  → run 'jac guide jac-types' for guidance
+  → run 'jac guide jac-types' for guidance
+  → run 'jac guide jac-types' for guidance
+  → run 'jac guide jac-types' for guidance
+  → run 'jac guide jac-types' for guidance
+  → run 'jac guide jac-types' for guidance
+  → run 'jac guide jac-types' for guidance
+  → run 'jac guide jac-types' for guidance
+  → run 'jac guide jac-types' for guidance
+  → run 'jac guide jac-types' for guidance
+  → run 'jac guide jac-types' for guidance
+  → run 'jac guide jac-types' for guidance
+  → run 'jac guide jac-types' for guidance
+  → run 'jac guide jac-types' for guidance
+  → run 'jac guide jac-types' for guidance
+  → run 'jac guide jac-types' for guidance
+  → run 'jac guide jac-types' for guidance
+  → run 'jac guide jac-types' for guidance
+  → run 'jac guide jac-types' for guidance
+  → run 'jac guide jac-types' for guidance
+  → run 'jac guide jac-types' for guidance
+  → run 'jac guide jac-types' for guidance
+  → run 'jac guide jac-types' for guidance
+  → run 'jac guide jac-types' for guidance
+  → run 'jac guide jac-types' for guidance
+  → run 'jac guide jac-types' for guidance
+  → run 'jac guide jac-types' for guidance
+  → run 'jac guide jac-types' for guidance
+  → run 'jac guide jac-types' for guidance
+  → run 'jac guide jac-types' for guidance
+
+================================= failed files =================================
+main.jac - 0 errors, 1 warning
+services/cart.sv.jac - 0 errors, 8 warnings
+pages/CartPage.cl.jac - 0 errors, 26 warnings
+pages/ProductPage.cl.jac - 8 errors, 49 warnings
+========================= 3 passed, 1 failed in 2.18s ==========================
+STDERR:
+⚠ warning[W3005]: Empty parentheses can be removed [remove-empty-parens]
+  --> main.jac:26:1
+   24 | 
+   25 | 
+   26 | def:pub app() -> JsxElement {
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   27 |     return <Shell />;
+   28 | }
+⚠ warning[W1036]: Generic type "dict" used without type arguments, defaulting to "dict[any]"; consider adding explicit type arguments
+  --> services/cart.sv.jac:19:49
+   17 | 
+   18 | 
+   19 | def cart_item_dict(ci: CartItem, v: Variant) -> dict {
+      |                                                 ^^^^
+   20 |     return {
+   21 |         "id": ci.id,
+⚠ warning[W1036]: Generic type "dict" used without type arguments, defaulting to "dict[any]"; consider adding explicit type arguments
+  --> services/cart.sv.jac:33:35
+   31 | 
+   32 | 
+   33 | def:pub get_cart(user_id: str) -> dict {
+      |                                   ^^^^
+   34 |     ensure_seeded();
+   35 |     items = [];
+⚠ warning[W1036]: Generic type "dict" used without type arguments, defaulting to "dict[any]"; consider adding explicit type arguments
+  --> services/cart.sv.jac:64:74
+   62 | 
+   63 | 
+   64 | def:pub add_to_cart(user_id: str, variant_id: str, quantity: int = 1) -> dict {
+      |                                                                          ^^^^
+   65 |     ensure_seeded();
+   66 |     if quantity < 1 {
+⚠ warning[W1036]: Generic type "dict" used without type arguments, defaulting to "dict[any]"; consider adding explicit type arguments
+  --> services/cart.sv.jac:91:63
+   89 | 
+   90 | 
+   91 | def:pub update_cart_item(cart_item_id: str, quantity: int) -> dict {
+      |                                                               ^^^^
+   92 |     ci = find_cart_item(cart_item_id);
+   93 |     if ci is None {
+⚠ warning[W1036]: Generic type "dict" used without type arguments, defaulting to "dict[any]"; consider adding explicit type arguments
+  --> services/cart.sv.jac:109:48
+  107 | 
+  108 | 
+  109 | def:pub remove_from_cart(cart_item_id: str) -> dict {
+      |                                                ^^^^
+  110 |     ci = find_cart_item(cart_item_id);
+  111 |     if ci is None {
+⚠ warning[W1036]: Generic type "dict" used without type arguments, defaulting to "dict[any]"; consider adding explicit type arguments
+  --> services/cart.sv.jac:119:37
+  117 | 
+  118 | 
+  119 | def:pub clear_cart(user_id: str) -> dict {
+      |                                     ^^^^
+  120 |     removed = 0;
+  121 |     for ci in [root -->][?:CartItem] {
+⚠ warning[W1036]: Generic type "dict" used without type arguments, defaulting to "dict[any]"; consider adding explicit type arguments
+  --> services/cart.sv.jac:140:6
+  138 |     shipping_address2: str = "",
+  139 |     shipping_country: str = "USA",
+  140 | ) -> dict {
+      |      ^^^^
+  141 |     ensure_seeded();
+  142 |     u = find_user(user_id);
+⚠ warning[W3030]: Function has 8 parameters (threshold is 7) [too-many-params]
+  --> services/cart.sv.jac:131:17
+  129 | 
+  130 | 
+  131 | def:pub checkout(
+      |                 ^
+  132 |     user_id: str,
+  133 |     payment_method_id: str,
+⚠ warning[W1100]: Module not found
+  --> /home/runner/.cache/jac/rt/ae2a02db133ca858-fa914e15f337b811/site/jaclang/runtimelib/client_runtime.cl.jac:3:13
+    1 | import from 'react' { * as React }
+    2 | import from 'react' { useState as reactUseState, useEffect as reactUseEffect }
+    3 | import from 'react-router-dom' {
+      |             ^^^^^^^^^^^^^^^^^^
+    4 |     BrowserRouter as ReactRouterBrowserRouter,
+    5 |     Routes as ReactRouterRoutes,
+⚠ warning[W1051]: Expression type could not be resolved (Unknown)
+  --> /home/runner/.cache/jac/rt/ae2a02db133ca858-fa914e15f337b811/site/jaclang/runtimelib/client_runtime.cl.jac:118:13
+  116 |      Routes = ReactRouterRoutes,
+  117 |      Route = ReactRouterRoute,
+  118 |      Link = ReactRouterLink,
+      |             ^^^^^^^^^^^^^^^
+  119 |      Navigate = ReactRouterNavigate,
+  120 |      useNavigate = reactRouterUseNavigate,
+help: Often fixed by adding a more specific type annotation to the relevant declaration (e.g., 'list[Task]' instead of bare 'list', or annotating an unannotated parameter or attribute). Can also indicate an unresolved import, a forward reference the checker cannot bind, or fallout from an upstream error.
+⚠ warning[W1051]: Expression type could not be resolved (Unknown)
+  --> /home/runner/.cache/jac/rt/ae2a02db133ca858-fa914e15f337b811/site/jaclang/runtimelib/client_runtime.cl.jac:120:20
+  118 |      Link = ReactRouterLink,
+  119 |      Navigate = ReactRouterNavigate,
+  120 |      useNavigate = reactRouterUseNavigate,
+      |                    ^^^^^^^^^^^^^^^^^^^^^^
+  121 |      useLocation = reactRouterUseLocation,
+  122 |      useParams = reactRouterUseParams,
+help: Often fixed by adding a more specific type annotation to the relevant declaration (e.g., 'list[Task]' instead of bare 'list', or annotating an unannotated parameter or attribute). Can also indicate an unresolved import, a forward reference the checker cannot bind, or fallout from an upstream error.
+⚠ warning[W1037]: Explicit 'any' type annotation disables type checking here; consider a more specific type
+  --> pages/CartPage.cl.jac:8:15
+    6 | 
+    7 | def:pub CartPage() -> JsxElement {
+    8 |     has cart: any = None;
+      |               ^^^
+    9 |     has loading: bool = True;
+   10 |     has checking_out: bool = False;
+⚠ warning[W1051]: Expression type could not be resolved (Unknown)
+  --> pages/CartPage.cl.jac:13:11
+   11 |     has feedback: str = "";
+   12 | 
+   13 |     nav = useNavigate();
+      |           ^^^^^^^^^^^
+   14 | 
+   15 |     async def refresh() -> None {
+help: Often fixed by adding a more specific type annotation to the relevant declaration (e.g., 'list[Task]' instead of bare 'list', or annotating an unannotated parameter or attribute). Can also indicate an unresolved import, a forward reference the checker cannot bind, or fallout from an upstream error.
+⚠ warning[W1051]: Expression type could not be resolved (Unknown)
+  --> pages/CartPage.cl.jac:13:11
+   11 |     has feedback: str = "";
+   12 | 
+   13 |     nav = useNavigate();
+      |           ^^^^^^^^^^^^^
+   14 | 
+   15 |     async def refresh() -> None {
+help: Often fixed by adding a more specific type annotation to the relevant declaration (e.g., 'list[Task]' instead of bare 'list', or annotating an unannotated parameter or attribute). Can also indicate an unresolved import, a forward reference the checker cannot bind, or fallout from an upstream error.
+⚠ warning[W1051]: Expression type could not be resolved (Unknown)
+  --> pages/CartPage.cl.jac:42:13
+   40 |             feedback = "Error: " + str(result["error"]);
+   41 |         } else {
+   42 |             nav("/orders");
+      |             ^^^
+   43 |         }
+   44 |     }
+help: Often fixed by adding a more specific type annotation to the relevant declaration (e.g., 'list[Task]' instead of bare 'list', or annotating an unannotated parameter or attribute). Can also indicate an unresolved import, a forward reference the checker cannot bind, or fallout from an upstream error.
+⚠ warning[W1051]: Expression type could not be resolved (Unknown)
+  --> pages/CartPage.cl.jac:42:13
+   40 |             feedback = "Error: " + str(result["error"]);
+   41 |         } else {
+   42 |             nav("/orders");
+      |             ^^^^^^^^^^^^^^
+   43 |         }
+   44 |     }
+help: Often fixed by adding a more specific type annotation to the relevant declaration (e.g., 'list[Task]' instead of bare 'list', or annotating an unannotated parameter or attribute). Can also indicate an unresolved import, a forward reference the checker cannot bind, or fallout from an upstream error.
+⚠ warning[W1051]: Expression type could not be resolved (Unknown)
+  --> pages/CartPage.cl.jac:57:29
+   55 |         {(<div>
+   56 |             <div className="space-y-3">
+   57 |                 {[<div key={item["id"]} className="flex items-center gap-4 p-4 bg-white border border-gray-200 rounded-xl">
+      |                             ^^^^^^^^^^
+   58 |                     <div className="w-16 h-16 bg-gradient-to-br from-gray-100 to-gray-50 rounded-lg flex items-center justify-center text-gray-300 text-xl font-light">
+   59 |                         {(item["color"] as str)[0:1] if item["color"] else "?"}
+help: Often fixed by adding a more specific type annotation to the relevant declaration (e.g., 'list[Task]' instead of bare 'list', or annotating an unannotated parameter or attribute). Can also indicate an unresolved import, a forward reference the checker cannot bind, or fallout from an upstream error.
+⚠ warning[W1051]: Expression type could not be resolved (Unknown)
+  --> pages/CartPage.cl.jac:59:27
+   57 |                 {[<div key={item["id"]} className="flex items-center gap-4 p-4 bg-white border border-gray-200 rounded-xl">
+   58 |                     <div className="w-16 h-16 bg-gradient-to-br from-gray-100 to-gray-50 rounded-lg flex items-center justify-center text-gray-300 text-xl font-light">
+   59 |                         {(item["color"] as str)[0:1] if item["color"] else "?"}
+      |                           ^^^^^^^^^^^^^
+   60 |                     </div>
+   61 |                     <div className="flex-1 min-w-0">
+help: Often fixed by adding a more specific type annotation to the relevant declaration (e.g., 'list[Task]' instead of bare 'list', or annotating an unannotated parameter or attribute). Can also indicate an unresolved import, a forward reference the checker cannot bind, or fallout from an upstream error.
+⚠ warning[W1051]: Expression type could not be resolved (Unknown)
+  --> pages/CartPage.cl.jac:59:57
+   57 |                 {[<div key={item["id"]} className="flex items-center gap-4 p-4 bg-white border border-gray-200 rounded-xl">
+   58 |                     <div className="w-16 h-16 bg-gradient-to-br from-gray-100 to-gray-50 rounded-lg flex items-center justify-center text-gray-300 text-xl font-light">
+   59 |                         {(item["color"] as str)[0:1] if item["color"] else "?"}
+      |                                                         ^^^^^^^^^^^^^
+   60 |                     </div>
+   61 |                     <div className="flex-1 min-w-0">
+help: Often fixed by adding a more specific type annotation to the relevant declaration (e.g., 'list[Task]' instead of bare 'list', or annotating an unannotated parameter or attribute). Can also indicate an unresolved import, a forward reference the checker cannot bind, or fallout from an upstream error.
+⚠ warning[W1051]: Expression type could not be resolved (Unknown)
+  --> pages/CartPage.cl.jac:63:31
+   61 |                     <div className="flex-1 min-w-0">
+   62 |                         <div className="text-sm font-semibold text-gray-900">
+   63 |                             {(item["color"] as str) + " · " + (item["size"] as str)}
+      |                               ^^^^^^^^^^^^^
+   64 |                         </div>
+   65 |                         <div className="text-xs text-gray-500 mt-0.5">
+help: Often fixed by adding a more specific type annotation to the relevant declaration (e.g., 'list[Task]' instead of bare 'list', or annotating an unannotated parameter or attribute). Can also indicate an unresolved import, a forward reference the checker cannot bind, or fallout from an upstream error.
+⚠ warning[W1051]: Expression type could not be resolved (Unknown)
+  --> pages/CartPage.cl.jac:63:64
+   61 |                     <div className="flex-1 min-w-0">
+   62 |                         <div className="text-sm font-semibold text-gray-900">
+   63 |                             {(item["color"] as str) + " · " + (item["size"] as str)}
+      |                                                                ^^^^^^^^^^^^
+   64 |                         </div>
+   65 |                         <div className="text-xs text-gray-500 mt-0.5">
+help: Often fixed by adding a more specific type annotation to the relevant declaration (e.g., 'list[Task]' instead of bare 'list', or annotating an unannotated parameter or attribute). Can also indicate an unresolved import, a forward reference the checker cannot bind, or fallout from an upstream error.
+⚠ warning[W1051]: Expression type could not be resolved (Unknown)
+  --> pages/CartPage.cl.jac:66:40
+   64 |                         </div>
+   65 |                         <div className="text-xs text-gray-500 mt-0.5">
+   66 |                             {"$" + str(item["price"]) + " each"}
+      |                                        ^^^^^^^^^^^^^
+   67 |                         </div>
+   68 |                     </div>
+help: Often fixed by adding a more specific type annotation to the relevant declaration (e.g., 'list[Task]' instead of bare 'list', or annotating an unannotated parameter or attribute). Can also indicate an unresolved import, a forward reference the checker cannot bind, or fallout from an upstream error.
+⚠ warning[W1051]: Expression type could not be resolved (Unknown)
+  --> pages/CartPage.cl.jac:71:58
+   69 |                     <div className="flex items-center gap-2">
+   70 |                         <button
+   71 |                             onClick={lambda { update_qty(item["id"] as str, (item["quantity"] as int) - 1); }}
+      |                                                          ^^^^^^^^^^
+   72 |                             className="w-8 h-8 rounded border border-gray-300 hover:bg-gray-50 text-gray-600"
+   73 |                         >−</button>
+help: Often fixed by adding a more specific type annotation to the relevant declaration (e.g., 'list[Task]' instead of bare 'list', or annotating an unannotated parameter or attribute). Can also indicate an unresolved import, a forward reference the checker cannot bind, or fallout from an upstream error.
+⚠ warning[W1051]: Expression type could not be resolved (Unknown)
+  --> pages/CartPage.cl.jac:71:78
+   69 |                     <div className="flex items-center gap-2">
+   70 |                         <button
+   71 |                             onClick={lambda { update_qty(item["id"] as str, (item["quantity"] as int) - 1); }}
+      |                                                                              ^^^^^^^^^^^^^^^^
+   72 |                             className="w-8 h-8 rounded border border-gray-300 hover:bg-gray-50 text-gray-600"
+   73 |                         >−</button>
+help: Often fixed by adding a more specific type annotation to the relevant declaration (e.g., 'list[Task]' instead of bare 'list', or annotating an unannotated parameter or attribute). Can also indicate an unresolved import, a forward reference the checker cannot bind, or fallout from an upstream error.
+⚠ warning[W1051]: Expression type could not be resolved (Unknown)
+  --> pages/CartPage.cl.jac:74:80
+   72 |                             className="w-8 h-8 rounded border border-gray-300 hover:bg-gray-50 text-gray-600"
+   73 |                         >−</button>
+   74 |                         <span className="w-8 text-center text-sm font-medium">{item["quantity"]}</span>
+      |                                                                                ^^^^^^^^^^^^^^^^
+   75 |                         <button
+   76 |                             onClick={lambda { update_qty(item["id"] as str, (item["quantity"] as int) + 1); }}
+help: Often fixed by adding a more specific type annotation to the relevant declaration (e.g., 'list[Task]' instead of bare 'list', or annotating an unannotated parameter or attribute). Can also indicate an unresolved import, a forward reference the checker cannot bind, or fallout from an upstream error.
+⚠ warning[W1051]: Expression type could not be resolved (Unknown)
+  --> pages/CartPage.cl.jac:76:58
+   74 |                         <span className="w-8 text-center text-sm font-medium">{item["quantity"]}</span>
+   75 |                         <button
+   76 |                             onClick={lambda { update_qty(item["id"] as str, (item["quantity"] as int) + 1); }}
+      |                                                          ^^^^^^^^^^
+   77 |                             className="w-8 h-8 rounded border border-gray-300 hover:bg-gray-50 text-gray-600"
+   78 |                         >+</button>
+help: Often fixed by adding a more specific type annotation to the relevant declaration (e.g., 'list[Task]' instead of bare 'list', or annotating an unannotated parameter or attribute). Can also indicate an unresolved import, a forward reference the checker cannot bind, or fallout from an upstream error.
+⚠ warning[W1051]: Expression type could not be resolved (Unknown)
+  --> pages/CartPage.cl.jac:76:78
+   74 |                         <span className="w-8 text-center text-sm font-medium">{item["quantity"]}</span>
+   75 |                         <button
+   76 |                             onClick={lambda { update_qty(item["id"] as str, (item["quantity"] as int) + 1); }}
+      |                                                                              ^^^^^^^^^^^^^^^^
+   77 |                             className="w-8 h-8 rounded border border-gray-300 hover:bg-gray-50 text-gray-600"
+   78 |                         >+</button>
+help: Often fixed by adding a more specific type annotation to the relevant declaration (e.g., 'list[Task]' instead of bare 'list', or annotating an unannotated parameter or attribute). Can also indicate an unresolved import, a forward reference the checker cannot bind, or fallout from an upstream error.
+⚠ warning[W1051]: Expression type could not be resolved (Unknown)
+  --> pages/CartPage.cl.jac:81:55
+   79 |                     </div>
+   80 |                     <button
+   81 |                         onClick={lambda { remove_item(item["id"] as str); }}
+      |                                                       ^^^^^^^^^^
+   82 |                         className="text-gray-400 hover:text-red-600 text-sm"
+   83 |                     >Remove</button>
+help: Often fixed by adding a more specific type annotation to the relevant declaration (e.g., 'list[Task]' instead of bare 'list', or annotating an unannotated parameter or attribute). Can also indicate an unresolved import, a forward reference the checker cannot bind, or fallout from an upstream error.
+⚠ warning[W3005]: Empty parentheses can be removed [remove-empty-parens]
+  --> pages/CartPage.cl.jac:15:5
+   13 |     nav = useNavigate();
+   14 | 
+   15 |     async def refresh() -> None {
+      |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   16 |         result = await get_cart("user_001");
+   17 |         cart = result if result else {"items": [], "total": 0.0, "count": 0};
+⚠ warning[W3037]: Unnecessary '-> None' return type annotation on 'refresh'; functions without a return statement implicitly return None [unnecessary-none-return]
+  --> pages/CartPage.cl.jac:15:28
+   13 |     nav = useNavigate();
+   14 | 
+   15 |     async def refresh() -> None {
+      |                            ^^^^
+   16 |         result = await get_cart("user_001");
+   17 |         cart = result if result else {"items": [], "total": 0.0, "count": 0};
+⚠ warning[W3037]: Unnecessary '-> None' return type annotation on 'update_qty'; functions without a return statement implicitly return None [unnecessary-none-return]
+  --> pages/CartPage.cl.jac:25:53
+   23 |     }
+   24 | 
+   25 |     async def update_qty(item_id: str, qty: int) -> None {
+      |                                                     ^^^^
+   26 |         await update_cart_item(item_id, qty);
+   27 |         await refresh();
+⚠ warning[W3037]: Unnecessary '-> None' return type annotation on 'remove_item'; functions without a return statement implicitly return None [unnecessary-none-return]
+  --> pages/CartPage.cl.jac:30:44
+   28 |     }
+   29 | 
+   30 |     async def remove_item(item_id: str) -> None {
+      |                                            ^^^^
+   31 |         await remove_from_cart(item_id);
+   32 |         await refresh();
+⚠ warning[W3037]: Unnecessary '-> None' return type annotation on 'do_checkout'; functions without a return statement implicitly return None [unnecessary-none-return]
+  --> pages/CartPage.cl.jac:35:46
+   33 |     }
+   34 | 
+   35 |     async def do_checkout(_e: MouseEvent) -> None {
+      |                                              ^^^^
+   36 |         checking_out = True;
+   37 |         result = await checkout("user_001", "pm_001", "123 Main St", "New York", "NY", "10001");
+⚠ warning[W3005]: Empty parentheses can be removed [remove-empty-parens]
+  --> pages/CartPage.cl.jac:7:1
+    5 | 
+    6 | 
+    7 | def:pub CartPage() -> JsxElement {
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    8 |     has cart: any = None;
+    9 |     has loading: bool = True;
+✖ Error: error[E1053]: Cannot assign <Unknown> to parameter 'product_id' of type str
+  --> pages/ProductPage.cl.jac:18:36
+   16 | 
+   17 |     async can with entry {
+   18 |         result = await get_product(pid);
+      |                                    ^^^
+   19 |         product = result;
+   20 |         loading = False;
+✖ Error: error[E1001]: Cannot assign <Unknown> to str
+  --> pages/ProductPage.cl.jac:22:13
+   20 |         loading = False;
+   21 |         if product != None and len(product["variants"]) > 0 {
+   22 |             selected_variant_id = product["variants"][0]["id"];
+      |             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   23 |         }
+   24 |     }
+✖ Error: error[E1001]: Cannot assign <Unknown> to str
+  --> pages/ProductPage.cl.jac:64:47
+   62 |                         {[<button
+   63 |                             key={v["id"]}
+   64 |                             onClick={lambda { selected_variant_id = v["id"]; }}
+      |                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   65 |                             className={"w-full text-left p-3 rounded-lg border transition-colors " + ("border-indigo-600 bg-indigo-50" if selected_variant_id == v["id"] else "border-gray-200 hover:border-gray-300")}
+   66 |                         >
+✖ Error: error[E1055]: No matching overload found for method "__add__" with the given arguments
+  --> pages/ProductPage.cl.jac:70:42
+   68 |                                 <div>
+   69 |                                     <div className="text-sm font-medium text-gray-900">
+   70 |                                         {v["color"] + " · " + v["size"]}
+      |                                          ^^^^^^^^^^^^^^^^^^
+   71 |                                     </div>
+   72 |                                     <div className="text-xs text-gray-500 mt-0.5">
+✖ Error: error[E1055]: No matching overload found for method "__add__" with the given arguments
+  --> pages/ProductPage.cl.jac:70:42
+   68 |                                 <div>
+   69 |                                     <div className="text-sm font-medium text-gray-900">
+   70 |                                         {v["color"] + " · " + v["size"]}
+      |                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   71 |                                     </div>
+   72 |                                     <div className="text-xs text-gray-500 mt-0.5">
+✖ Error: error[E1055]: No matching overload found for method "__add__" with the given arguments
+  --> pages/ProductPage.cl.jac:73:42
+   71 |                                     </div>
+   72 |                                     <div className="text-xs text-gray-500 mt-0.5">
+   73 |                                         {v["material"] + " · " + str(v["stock_qty"]) + " in stock"}
+      |                                          ^^^^^^^^^^^^^^^^^^^^^
+   74 |                                     </div>
+   75 |                                 </div>
+✖ Error: error[E1055]: No matching overload found for method "__add__" with the given arguments
+  --> pages/ProductPage.cl.jac:73:42
+   71 |                                     </div>
+   72 |                                     <div className="text-xs text-gray-500 mt-0.5">
+   73 |                                         {v["material"] + " · " + str(v["stock_qty"]) + " in stock"}
+      |                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   74 |                                     </div>
+   75 |                                 </div>
+✖ Error: error[E1055]: No matching overload found for method "__add__" with the given arguments
+  --> pages/ProductPage.cl.jac:73:42
+   71 |                                     </div>
+   72 |                                     <div className="text-xs text-gray-500 mt-0.5">
+   73 |                                         {v["material"] + " · " + str(v["stock_qty"]) + " in stock"}
+      |                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   74 |                                     </div>
+   75 |                                 </div>
+⚠ warning[W1051]: Expression type could not be resolved (Unknown)
+  --> /home/runner/.cache/jac/rt/ae2a02db133ca858-fa914e15f337b811/site/jaclang/runtimelib/client_runtime.cl.jac:122:18
+  120 |      useNavigate = reactRouterUseNavigate,
+  121 |      useLocation = reactRouterUseLocation,
+  122 |      useParams = reactRouterUseParams,
+      |                  ^^^^^^^^^^^^^^^^^^^^
+  123 |      Outlet = ReactRouterOutlet,
+  124 |      JacClientErrorBoundary = ErrorBoundary,
+help: Often fixed by adding a more specific type annotation to the relevant declaration (e.g., 'list[Task]' instead of bare 'list', or annotating an unannotated parameter or attribute). Can also indicate an unresolved import, a forward reference the checker cannot bind, or fallout from an upstream error.
+⚠ warning[W1051]: Expression type could not be resolved (Unknown)
+  --> pages/ProductPage.cl.jac:9:18
+    7 | 
+    8 | def:pub ProductPage() -> JsxElement {
+    9 |     has product: Any = None;
+      |                  ^^^
+   10 |     has loading: bool = True;
+   11 |     has selected_variant_id: str = "";
+help: Often fixed by adding a more specific type annotation to the relevant declaration (e.g., 'list[Task]' instead of bare 'list', or annotating an unannotated parameter or attribute). Can also indicate an unresolved import, a forward reference the checker cannot bind, or fallout from an upstream error.
+⚠ warning[W1051]: Expression type could not be resolved (Unknown)
+  --> pages/ProductPage.cl.jac:14:14
+   12 |     has feedback: str = "";
+   13 | 
+   14 |     params = useParams();
+      |              ^^^^^^^^^
+   15 |     pid = params["id"];
+   16 | 
+help: Often fixed by adding a more specific type annotation to the relevant declaration (e.g., 'list[Task]' instead of bare 'list', or annotating an unannotated parameter or attribute). Can also indicate an unresolved import, a forward reference the checker cannot bind, or fallout from an upstream error.
+⚠ warning[W1051]: Expression type could not be resolved (Unknown)
+  --> pages/ProductPage.cl.jac:14:14
+   12 |     has feedback: str = "";
+   13 | 
+   14 |     params = useParams();
+      |              ^^^^^^^^^^^
+   15 |     pid = params["id"];
+   16 | 
+help: Often fixed by adding a more specific type annotation to the relevant declaration (e.g., 'list[Task]' instead of bare 'list', or annotating an unannotated parameter or attribute). Can also indicate an unresolved import, a forward reference the checker cannot bind, or fallout from an upstream error.
+⚠ warning[W1051]: Expression type could not be resolved (Unknown)
+  --> pages/ProductPage.cl.jac:15:11
+   13 | 
+   14 |     params = useParams();
+   15 |     pid = params["id"];
+      |           ^^^^^^
+   16 | 
+   17 |     async can with entry {
+help: Often fixed by adding a more specific type annotation to the relevant declaration (e.g., 'list[Task]' instead of bare 'list', or annotating an unannotated parameter or attribute). Can also indicate an unresolved import, a forward reference the checker cannot bind, or fallout from an upstream error.
+⚠ warning[W1051]: Expression type could not be resolved (Unknown)
+  --> pages/ProductPage.cl.jac:15:11
+   13 | 
+   14 |     params = useParams();
+   15 |     pid = params["id"];
+      |           ^^^^^^^^^^^^
+   16 | 
+   17 |     async can with entry {
+help: Often fixed by adding a more specific type annotation to the relevant declaration (e.g., 'list[Task]' instead of bare 'list', or annotating an unannotated parameter or attribute). Can also indicate an unresolved import, a forward reference the checker cannot bind, or fallout from an upstream error.
+⚠ warning[W1051]: Expression type could not be resolved (Unknown)
+  --> pages/ProductPage.cl.jac:18:36
+   16 | 
+   17 |     async can with entry {
+   18 |         result = await get_product(pid);
+      |                                    ^^^
+   19 |         product = result;
+   20 |         loading = False;
+help: Often fixed by adding a more specific type annotation to the relevant declaration (e.g., 'list[Task]' instead of bare 'list', or annotating an unannotated parameter or attribute). Can also indicate an unresolved import, a forward reference the checker cannot bind, or fallout from an upstream error.
+⚠ warning[W1051]: Expression type could not be resolved (Unknown)
+  --> pages/ProductPage.cl.jac:22:35
+   20 |         loading = False;
+   21 |         if product != None and len(product["variants"]) > 0 {
+   22 |             selected_variant_id = product["variants"][0]["id"];
+      |                                   ^^^^^^^^^^^^^^^^^^^^^^
+   23 |         }
+   24 |     }
+help: Often fixed by adding a more specific type annotation to the relevant declaration (e.g., 'list[Task]' instead of bare 'list', or annotating an unannotated parameter or attribute). Can also indicate an unresolved import, a forward reference the checker cannot bind, or fallout from an upstream error.
+⚠ warning[W1051]: Expression type could not be resolved (Unknown)
+  --> pages/ProductPage.cl.jac:22:35
+   20 |         loading = False;
+   21 |         if product != None and len(product["variants"]) > 0 {
+   22 |             selected_variant_id = product["variants"][0]["id"];
+      |                                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   23 |         }
+   24 |     }
+help: Often fixed by adding a more specific type annotation to the relevant declaration (e.g., 'list[Task]' instead of bare 'list', or annotating an unannotated parameter or attribute). Can also indicate an unresolved import, a forward reference the checker cannot bind, or fallout from an upstream error.
+⚠ warning[W1051]: Expression type could not be resolved (Unknown)
+  --> pages/ProductPage.cl.jac:43:14
+   41 |         return <div className="max-w-4xl mx-auto px-6 py-12">
+   42 |             <p className="text-gray-700">Product not found.</p>
+   43 |             <Link to="/" className="text-indigo-600 hover:underline mt-4 inline-block">← Back to catalog</Link>
+      |              ^^^^
+   44 |         </div>;
+   45 |     }
+help: Often fixed by adding a more specific type annotation to the relevant declaration (e.g., 'list[Task]' instead of bare 'list', or annotating an unannotated parameter or attribute). Can also indicate an unresolved import, a forward reference the checker cannot bind, or fallout from an upstream error.
+⚠ warning[W1051]: Expression type could not be resolved (Unknown)
+  --> pages/ProductPage.cl.jac:43:107
+   41 |         return <div className="max-w-4xl mx-auto px-6 py-12">
+   42 |             <p className="text-gray-700">Product not found.</p>
+   43 |             <Link to="/" className="text-indigo-600 hover:underline mt-4 inline-block">← Back to catalog</Link>
+      |                                                                                                           ^^^^
+   44 |         </div>;
+   45 |     }
+help: Often fixed by adding a more specific type annotation to the relevant declaration (e.g., 'list[Task]' instead of bare 'list', or annotating an unannotated parameter or attribute). Can also indicate an unresolved import, a forward reference the checker cannot bind, or fallout from an upstream error.
+⚠ warning[W1051]: Expression type could not be resolved (Unknown)
+  --> pages/ProductPage.cl.jac:48:10
+   46 | 
+   47 |     return <div className="max-w-4xl mx-auto px-6 py-8">
+   48 |         <Link to="/" className="text-sm text-indigo-600 hover:underline">← Back to catalog</Link>
+      |          ^^^^
+   49 | 
+   50 |         <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-8">
+help: Often fixed by adding a more specific type annotation to the relevant declaration (e.g., 'list[Task]' instead of bare 'list', or annotating an unannotated parameter or attribute). Can also indicate an unresolved import, a forward reference the checker cannot bind, or fallout from an upstream error.
+⚠ warning[W1051]: Expression type could not be resolved (Unknown)
+  --> pages/ProductPage.cl.jac:48:93
+   46 | 
+   47 |     return <div className="max-w-4xl mx-auto px-6 py-8">
+   48 |         <Link to="/" className="text-sm text-indigo-600 hover:underline">← Back to catalog</Link>
+      |                                                                                             ^^^^
+   49 | 
+   50 |         <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-8">
+help: Often fixed by adding a more specific type annotation to the relevant declaration (e.g., 'list[Task]' instead of bare 'list', or annotating an unannotated parameter or attribute). Can also indicate an unresolved import, a forward reference the checker cannot bind, or fallout from an upstream error.
+⚠ warning[W1051]: Expression type could not be resolved (Unknown)
+  --> pages/ProductPage.cl.jac:52:18
+   50 |         <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-8">
+   51 |             <div className="aspect-square bg-gradient-to-br from-gray-100 to-gray-50 rounded-2xl flex items-center justify-center text-gray-300 text-7xl font-light">
+   52 |                 {product["name"][0:1]}
+      |                  ^^^^^^^
+   53 |             </div>
+   54 | 
+help: Often fixed by adding a more specific type annotation to the relevant declaration (e.g., 'list[Task]' instead of bare 'list', or annotating an unannotated parameter or attribute). Can also indicate an unresolved import, a forward reference the checker cannot bind, or fallout from an upstream error.
+⚠ warning[W1051]: Expression type could not be resolved (Unknown)
+  --> pages/ProductPage.cl.jac:52:18
+   50 |         <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-8">
+   51 |             <div className="aspect-square bg-gradient-to-br from-gray-100 to-gray-50 rounded-2xl flex items-center justify-center text-gray-300 text-7xl font-light">
+   52 |                 {product["name"][0:1]}
+      |                  ^^^^^^^^^^^^^^^
+   53 |             </div>
+   54 | 
+help: Often fixed by adding a more specific type annotation to the relevant declaration (e.g., 'list[Task]' instead of bare 'list', or annotating an unannotated parameter or attribute). Can also indicate an unresolved import, a forward reference the checker cannot bind, or fallout from an upstream error.
+⚠ warning[W1051]: Expression type could not be resolved (Unknown)
+  --> pages/ProductPage.cl.jac:52:18
+   50 |         <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-8">
+   51 |             <div className="aspect-square bg-gradient-to-br from-gray-100 to-gray-50 rounded-2xl flex items-center justify-center text-gray-300 text-7xl font-light">
+   52 |                 {product["name"][0:1]}
+      |                  ^^^^^^^^^^^^^^^^^^^^
+   53 |             </div>
+   54 | 
+help: Often fixed by adding a more specific type annotation to the relevant declaration (e.g., 'list[Task]' instead of bare 'list', or annotating an unannotated parameter or attribute). Can also indicate an unresolved import, a forward reference the checker cannot bind, or fallout from an upstream error.
+⚠ warning[W1051]: Expression type could not be resolved (Unknown)
+  --> pages/ProductPage.cl.jac:56:67
+   54 | 
+   55 |             <div>
+   56 |                 <h1 className="text-3xl font-bold text-gray-900">{product["name"]}</h1>
+      |                                                                   ^^^^^^^
+   57 |                 <p className="text-gray-600 mt-2 leading-relaxed">{product["description"]}</p>
+   58 | 
+help: Often fixed by adding a more specific type annotation to the relevant declaration (e.g., 'list[Task]' instead of bare 'list', or annotating an unannotated parameter or attribute). Can also indicate an unresolved import, a forward reference the checker cannot bind, or fallout from an upstream error.
+⚠ warning[W1051]: Expression type could not be resolved (Unknown)
+  --> pages/ProductPage.cl.jac:56:67
+   54 | 
+   55 |             <div>
+   56 |                 <h1 className="text-3xl font-bold text-gray-900">{product["name"]}</h1>
+      |                                                                   ^^^^^^^^^^^^^^^
+   57 |                 <p className="text-gray-600 mt-2 leading-relaxed">{product["description"]}</p>
+   58 | 
+help: Often fixed by adding a more specific type annotation to the relevant declaration (e.g., 'list[Task]' instead of bare 'list', or annotating an unannotated parameter or attribute). Can also indicate an unresolved import, a forward reference the checker cannot bind, or fallout from an upstream error.
+⚠ warning[W1051]: Expression type could not be resolved (Unknown)
+  --> pages/ProductPage.cl.jac:57:68
+   55 |             <div>
+   56 |                 <h1 className="text-3xl font-bold text-gray-900">{product["name"]}</h1>
+   57 |                 <p className="text-gray-600 mt-2 leading-relaxed">{product["description"]}</p>
+      |                                                                    ^^^^^^^
+   58 | 
+   59 |                 <div className="mt-6">
+help: Often fixed by adding a more specific type annotation to the relevant declaration (e.g., 'list[Task]' instead of bare 'list', or annotating an unannotated parameter or attribute). Can also indicate an unresolved import, a forward reference the checker cannot bind, or fallout from an upstream error.
+⚠ warning[W1051]: Expression type could not be resolved (Unknown)
+  --> pages/ProductPage.cl.jac:57:68
+   55 |             <div>
+   56 |                 <h1 className="text-3xl font-bold text-gray-900">{product["name"]}</h1>
+   57 |                 <p className="text-gray-600 mt-2 leading-relaxed">{product["description"]}</p>
+      |                                                                    ^^^^^^^^^^^^^^^^^^^^^^
+   58 | 
+   59 |                 <div className="mt-6">
+help: Often fixed by adding a more specific type annotation to the relevant declaration (e.g., 'list[Task]' instead of bare 'list', or annotating an unannotated parameter or attribute). Can also indicate an unresolved import, a forward reference the checker cannot bind, or fallout from an upstream error.
+⚠ warning[W1051]: Expression type could not be resolved (Unknown)
+  --> pages/ProductPage.cl.jac:80:44
+   78 |                                 </span>
+   79 |                             </div>
+   80 |                         </button> for v in product["variants"]]}
+      |                                            ^^^^^^^
+   81 |                     </div>
+   82 |                 </div>
+help: Often fixed by adding a more specific type annotation to the relevant declaration (e.g., 'list[Task]' instead of bare 'list', or annotating an unannotated parameter or attribute). Can also indicate an unresolved import, a forward reference the checker cannot bind, or fallout from an upstream error.
+⚠ warning[W1051]: Expression type could not be resolved (Unknown)
+  --> pages/ProductPage.cl.jac:80:44
+   78 |                                 </span>
+   79 |                             </div>
+   80 |                         </button> for v in product["variants"]]}
+      |                                            ^^^^^^^^^^^^^^^^^^^
+   81 |                     </div>
+   82 |                 </div>
+help: Often fixed by adding a more specific type annotation to the relevant declaration (e.g., 'list[Task]' instead of bare 'list', or annotating an unannotated parameter or attribute). Can also indicate an unresolved import, a forward reference the checker cannot bind, or fallout from an upstream error.
+⚠ warning[W1051]: Expression type could not be resolved (Unknown)
+  --> pages/ProductPage.cl.jac:63:34
+   61 |                     <div className="space-y-2">
+   62 |                         {[<button
+   63 |                             key={v["id"]}
+      |                                  ^
+   64 |                             onClick={lambda { selected_variant_id = v["id"]; }}
+   65 |                             className={"w-full text-left p-3 rounded-lg border transition-colors " + ("border-indigo-600 bg-indigo-50" if selected_variant_id == v["id"] else "border-gray-200 hover:border-gray-300")}
+help: Often fixed by adding a more specific type annotation to the relevant declaration (e.g., 'list[Task]' instead of bare 'list', or annotating an unannotated parameter or attribute). Can also indicate an unresolved import, a forward reference the checker cannot bind, or fallout from an upstream error.
+⚠ warning[W1051]: Expression type could not be resolved (Unknown)
+  --> pages/ProductPage.cl.jac:63:34
+   61 |                     <div className="space-y-2">
+   62 |                         {[<button
+   63 |                             key={v["id"]}
+      |                                  ^^^^^^^
+   64 |                             onClick={lambda { selected_variant_id = v["id"]; }}
+   65 |                             className={"w-full text-left p-3 rounded-lg border transition-colors " + ("border-indigo-600 bg-indigo-50" if selected_variant_id == v["id"] else "border-gray-200 hover:border-gray-300")}
+help: Often fixed by adding a more specific type annotation to the relevant declaration (e.g., 'list[Task]' instead of bare 'list', or annotating an unannotated parameter or attribute). Can also indicate an unresolved import, a forward reference the checker cannot bind, or fallout from an upstream error.
+⚠ warning[W1051]: Expression type could not be resolved (Unknown)
+  --> pages/ProductPage.cl.jac:64:69
+   62 |                         {[<button
+   63 |                             key={v["id"]}
+   64 |                             onClick={lambda { selected_variant_id = v["id"]; }}
+      |                                                                     ^
+   65 |                             className={"w-full text-left p-3 rounded-lg border transition-colors " + ("border-indigo-600 bg-indigo-50" if selected_variant_id == v["id"] else "border-gray-200 hover:border-gray-300")}
+   66 |                         >
+help: Often fixed by adding a more specific type annotation to the relevant declaration (e.g., 'list[Task]' instead of bare 'list', or annotating an unannotated parameter or attribute). Can also indicate an unresolved import, a forward reference the checker cannot bind, or fallout from an upstream error.
+⚠ warning[W1051]: Expression type could not be resolved (Unknown)
+  --> pages/ProductPage.cl.jac:64:69
+   62 |                         {[<button
+   63 |                             key={v["id"]}
+   64 |                             onClick={lambda { selected_variant_id = v["id"]; }}
+      |                                                                     ^^^^^^^
+   65 |                             className={"w-full text-left p-3 rounded-lg border transition-colors " + ("border-indigo-600 bg-indigo-50" if selected_variant_id == v["id"] else "border-gray-200 hover:border-gray-300")}
+   66 |                         >
+help: Often fixed by adding a more specific type annotation to the relevant declaration (e.g., 'list[Task]' instead of bare 'list', or annotating an unannotated parameter or attribute). Can also indicate an unresolved import, a forward reference the checker cannot bind, or fallout from an upstream error.
+⚠ warning[W1051]: Expression type could not be resolved (Unknown)
+  --> pages/ProductPage.cl.jac:65:162
+   63 |                             key={v["id"]}
+   64 |                             onClick={lambda { selected_variant_id = v["id"]; }}
+   65 |                             className={"w-full text-left p-3 rounded-lg border transition-colors " + ("border-indigo-600 bg-indigo-50" if selected_variant_id == v["id"] else "border-gray-200 hover:border-gray-300")}
+      |                                                                                                                                                                  ^
+   66 |                         >
+   67 |                             <div className="flex items-center justify-between">
+help: Often fixed by adding a more specific type annotation to the relevant declaration (e.g., 'list[Task]' instead of bare 'list', or annotating an unannotated parameter or attribute). Can also indicate an unresolved import, a forward reference the checker cannot bind, or fallout from an upstream error.
+⚠ warning[W1051]: Expression type could not be resolved (Unknown)
+  --> pages/ProductPage.cl.jac:65:162
+   63 |                             key={v["id"]}
+   64 |                             onClick={lambda { selected_variant_id = v["id"]; }}
+   65 |                             className={"w-full text-left p-3 rounded-lg border transition-colors " + ("border-indigo-600 bg-indigo-50" if selected_variant_id == v["id"] else "border-gray-200 hover:border-gray-300")}
+      |                                                                                                                                                                  ^^^^^^^
+   66 |                         >
+   67 |                             <div className="flex items-center justify-between">
+help: Often fixed by adding a more specific type annotation to the relevant declaration (e.g., 'list[Task]' instead of bare 'list', or annotating an unannotated parameter or attribute). Can also indicate an unresolved import, a forward reference the checker cannot bind, or fallout from an upstream error.
+⚠ warning[W1051]: Expression type could not be resolved (Unknown)
+  --> pages/ProductPage.cl.jac:70:42
+   68 |                                 <div>
+   69 |                                     <div className="text-sm font-medium text-gray-900">
+   70 |                                         {v["color"] + " · " + v["size"]}
+      |                                          ^
+   71 |                                     </div>
+   72 |                                     <div className="text-xs text-gray-500 mt-0.5">
+help: Often fixed by adding a more specific type annotation to the relevant declaration (e.g., 'list[Task]' instead of bare 'list', or annotating an unannotated parameter or attribute). Can also indicate an unresolved import, a forward reference the checker cannot bind, or fallout from an upstream error.
+⚠ warning[W1051]: Expression type could not be resolved (Unknown)
+  --> pages/ProductPage.cl.jac:70:42
+   68 |                                 <div>
+   69 |                                     <div className="text-sm font-medium text-gray-900">
+   70 |                                         {v["color"] + " · " + v["size"]}
+      |                                          ^^^^^^^^^^
+   71 |                                     </div>
+   72 |                                     <div className="text-xs text-gray-500 mt-0.5">
+help: Often fixed by adding a more specific type annotation to the relevant declaration (e.g., 'list[Task]' instead of bare 'list', or annotating an unannotated parameter or attribute). Can also indicate an unresolved import, a forward reference the checker cannot bind, or fallout from an upstream error.
+⚠ warning[W1051]: Expression type could not be resolved (Unknown)
+  --> pages/ProductPage.cl.jac:70:42
+   68 |                                 <div>
+   69 |                                     <div className="text-sm font-medium text-gray-900">
+   70 |                                         {v["color"] + " · " + v["size"]}
+      |                                          ^^^^^^^^^^^^^^^^^^
+   71 |                                     </div>
+   72 |                                     <div className="text-xs text-gray-500 mt-0.5">
+help: Often fixed by adding a more specific type annotation to the relevant declaration (e.g., 'list[Task]' instead of bare 'list', or annotating an unannotated parameter or attribute). Can also indicate an unresolved import, a forward reference the checker cannot bind, or fallout from an upstream error.
+⚠ warning[W1051]: Expression type could not be resolved (Unknown)
+  --> pages/ProductPage.cl.jac:70:63
+   68 |                                 <div>
+   69 |                                     <div className="text-sm font-medium text-gray-900">
+   70 |                                         {v["color"] + " · " + v["size"]}
+      |                                                               ^
+   71 |                                     </div>
+   72 |                                     <div className="text-xs text-gray-500 mt-0.5">
+help: Often fixed by adding a more specific type annotation to the relevant declaration (e.g., 'list[Task]' instead of bare 'list', or annotating an unannotated parameter or attribute). Can also indicate an unresolved import, a forward reference the checker cannot bind, or fallout from an upstream error.
+⚠ warning[W1051]: Expression type could not be resolved (Unknown)
+  --> pages/ProductPage.cl.jac:70:63
+   68 |                                 <div>
+   69 |                                     <div className="text-sm font-medium text-gray-900">
+   70 |                                         {v["color"] + " · " + v["size"]}
+      |                                                               ^^^^^^^^^
+   71 |                                     </div>
+   72 |                                     <div className="text-xs text-gray-500 mt-0.5">
+help: Often fixed by adding a more specific type annotation to the relevant declaration (e.g., 'list[Task]' instead of bare 'list', or annotating an unannotated parameter or attribute). Can also indicate an unresolved import, a forward reference the checker cannot bind, or fallout from an upstream error.
+⚠ warning[W1051]: Expression type could not be resolved (Unknown)
+  --> pages/ProductPage.cl.jac:70:42
+   68 |                                 <div>
+   69 |                                     <div className="text-sm font-medium text-gray-900">
+   70 |                                         {v["color"] + " · " + v["size"]}
+      |                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   71 |                                     </div>
+   72 |                                     <div className="text-xs text-gray-500 mt-0.5">
+help: Often fixed by adding a more specific type annotation to the relevant declaration (e.g., 'list[Task]' instead of bare 'list', or annotating an unannotated parameter or attribute). Can also indicate an unresolved import, a forward reference the checker cannot bind, or fallout from an upstream error.
+⚠ warning[W1051]: Expression type could not be resolved (Unknown)
+  --> pages/ProductPage.cl.jac:73:42
+   71 |                                     </div>
+   72 |                                     <div className="text-xs text-gray-500 mt-0.5">
+   73 |                                         {v["material"] + " · " + str(v["stock_qty"]) + " in stock"}
+      |                                          ^
+   74 |                                     </div>
+   75 |                                 </div>
+help: Often fixed by adding a more specific type annotation to the relevant declaration (e.g., 'list[Task]' instead of bare 'list', or annotating an unannotated parameter or attribute). Can also indicate an unresolved import, a forward reference the checker cannot bind, or fallout from an upstream error.
+⚠ warning[W1051]: Expression type could not be resolved (Unknown)
+  --> pages/ProductPage.cl.jac:73:42
+   71 |                                     </div>
+   72 |                                     <div className="text-xs text-gray-500 mt-0.5">
+   73 |                                         {v["material"] + " · " + str(v["stock_qty"]) + " in stock"}
+      |                                          ^^^^^^^^^^^^^
+   74 |                                     </div>
+   75 |                                 </div>
+help: Often fixed by adding a more specific type annotation to the relevant declaration (e.g., 'list[Task]' instead of bare 'list', or annotating an unannotated parameter or attribute). Can also indicate an unresolved import, a forward reference the checker cannot bind, or fallout from an upstream error.
+⚠ warning[W1051]: Expression type could not be resolved (Unknown)
+  --> pages/ProductPage.cl.jac:73:42
+   71 |                                     </div>
+   72 |                                     <div className="text-xs text-gray-500 mt-0.5">
+   73 |                                         {v["material"] + " · " + str(v["stock_qty"]) + " in stock"}
+      |                                          ^^^^^^^^^^^^^^^^^^^^^
+   74 |                                     </div>
+   75 |                                 </div>
+help: Often fixed by adding a more specific type annotation to the relevant declaration (e.g., 'list[Task]' instead of bare 'list', or annotating an unannotated parameter or attribute). Can also indicate an unresolved import, a forward reference the checker cannot bind, or fallout from an upstream error.
+⚠ warning[W1051]: Expression type could not be resolved (Unknown)
+  --> pages/ProductPage.cl.jac:73:70
+   71 |                                     </div>
+   72 |                                     <div className="text-xs text-gray-500 mt-0.5">
+   73 |                                         {v["material"] + " · " + str(v["stock_qty"]) + " in stock"}
+      |                                                                      ^
+   74 |                                     </div>
+   75 |                                 </div>
+help: Often fixed by adding a more specific type annotation to the relevant declaration (e.g., 'list[Task]' instead of bare 'list', or annotating an unannotated parameter or attribute). Can also indicate an unresolved import, a forward reference the checker cannot bind, or fallout from an upstream error.
+⚠ warning[W1051]: Expression type could not be resolved (Unknown)
+  --> pages/ProductPage.cl.jac:73:70
+   71 |                                     </div>
+   72 |                                     <div className="text-xs text-gray-500 mt-0.5">
+   73 |                                         {v["material"] + " · " + str(v["stock_qty"]) + " in stock"}
+      |                                                                      ^^^^^^^^^^^^^^
+   74 |                                     </div>
+   75 |                                 </div>
+help: Often fixed by adding a more specific type annotation to the relevant declaration (e.g., 'list[Task]' instead of bare 'list', or annotating an unannotated parameter or attribute). Can also indicate an unresolved import, a forward reference the checker cannot bind, or fallout from an upstream error.
+⚠ warning[W1051]: Expression type could not be resolved (Unknown)
+  --> pages/ProductPage.cl.jac:73:42
+   71 |                                     </div>
+   72 |                                     <div className="text-xs text-gray-500 mt-0.5">
+   73 |                                         {v["material"] + " · " + str(v["stock_qty"]) + " in stock"}
+      |                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   74 |                                     </div>
+   75 |                                 </div>
+help: Often fixed by adding a more specific type annotation to the relevant declaration (e.g., 'list[Task]' instead of bare 'list', or annotating an unannotated parameter or attribute). Can also indicate an unresolved import, a forward reference the checker cannot bind, or fallout from an upstream error.
+⚠ warning[W1051]: Expression type could not be resolved (Unknown)
+  --> pages/ProductPage.cl.jac:73:42
+   71 |                                     </div>
+   72 |                                     <div className="text-xs text-gray-500 mt-0.5">
+   73 |                                         {v["material"] + " · " + str(v["stock_qty"]) + " in stock"}
+      |                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   74 |                                     </div>
+   75 |                                 </div>
+help: Often fixed by adding a more specific type annotation to the relevant declaration (e.g., 'list[Task]' instead of bare 'list', or annotating an unannotated parameter or attribute). Can also indicate an unresolved import, a forward reference the checker cannot bind, or fallout from an upstream error.
+⚠ warning[W1051]: Expression type could not be resolved (Unknown)
+  --> pages/ProductPage.cl.jac:77:48
+   75 |                                 </div>
+   76 |                                 <span className="text-sm font-bold text-gray-900">
+   77 |                                     {"$" + str(v["price"])}
+      |                                                ^
+   78 |                                 </span>
+   79 |                             </div>
+help: Often fixed by adding a more specific type annotation to the relevant declaration (e.g., 'list[Task]' instead of bare 'list', or annotating an unannotated parameter or attribute). Can also indicate an unresolved import, a forward reference the checker cannot bind, or fallout from an upstream error.
+⚠ warning[W1051]: Expression type could not be resolved (Unknown)
+  --> pages/ProductPage.cl.jac:77:48
+   75 |                                 </div>
+   76 |                                 <span className="text-sm font-bold text-gray-900">
+   77 |                                     {"$" + str(v["price"])}
+      |                                                ^^^^^^^^^^
+   78 |                                 </span>
+   79 |                             </div>
+help: Often fixed by adding a more specific type annotation to the relevant declaration (e.g., 'list[Task]' instead of bare 'list', or annotating an unannotated parameter or attribute). Can also indicate an unresolved import, a forward reference the checker cannot bind, or fallout from an upstream error.
+⚠ warning[W2058]: Comparison to None should use 'is' or 'is not', not '=='
+  --> pages/ProductPage.cl.jac:21:12
+   19 |         product = result;
+   20 |         loading = False;
+   21 |         if product != None and len(product["variants"]) > 0 {
+      |            ^^^^^^^^^^^^^^^
+   22 |             selected_variant_id = product["variants"][0]["id"];
+   23 |         }
+⚠ warning[W2058]: Comparison to None should use 'is' or 'is not', not '=='
+  --> pages/ProductPage.cl.jac:40:8
+   38 |         return <div className="max-w-4xl mx-auto px-6 py-12 text-gray-500">Loading...</div>;
+   39 |     }
+   40 |     if product == None {
+      |        ^^^^^^^^^^^^^^^
+   41 |         return <div className="max-w-4xl mx-auto px-6 py-12">
+   42 |             <p className="text-gray-700">Product not found.</p>
+⚠ warning[W3041]: Reactive `has` field 'product' is read after being assigned in the same `can with entry` block; the read returns the closure-captured pre-update value, not the just-assigned one [stale-has-read]
+  --> pages/ProductPage.cl.jac:21:12
+   19 |         product = result;
+   20 |         loading = False;
+   21 |         if product != None and len(product["variants"]) > 0 {
+      |            ^^^^^^^
+   22 |             selected_variant_id = product["variants"][0]["id"];
+   23 |         }
+help: The has-field assignment lowers to a React useState setter call, which is scheduled for the next render. To branch on the new value in the same block, capture it in a local first: `local = expr; <field> = local; if local { ... }`.
+⚠ warning[W3041]: Reactive `has` field 'product' is read after being assigned in the same `can with entry` block; the read returns the closure-captured pre-update value, not the just-assigned one [stale-has-read]
+  --> pages/ProductPage.cl.jac:21:36
+   19 |         product = result;
+   20 |         loading = False;
+   21 |         if product != None and len(product["variants"]) > 0 {
+      |                                    ^^^^^^^
+   22 |             selected_variant_id = product["variants"][0]["id"];
+   23 |         }
+help: The has-field assignment lowers to a React useState setter call, which is scheduled for the next render. To branch on the new value in the same block, capture it in a local first: `local = expr; <field> = local; if local { ... }`.
+⚠ warning[W3041]: Reactive `has` field 'product' is read after being assigned in the same `can with entry` block; the read returns the closure-captured pre-update value, not the just-assigned one [stale-has-read]
+  --> pages/ProductPage.cl.jac:22:35
+   20 |         loading = False;
+   21 |         if product != None and len(product["variants"]) > 0 {
+   22 |             selected_variant_id = product["variants"][0]["id"];
+      |                                   ^^^^^^^
+   23 |         }
+   24 |     }
+help: The has-field assignment lowers to a React useState setter call, which is scheduled for the next render. To branch on the new value in the same block, capture it in a local first: `local = expr; <field> = local; if local { ... }`.
+⚠ warning[W3005]: Empty parentheses can be removed [remove-empty-parens]
+  --> pages/ProductPage.cl.jac:8:1
+    6 | 
+    7 | 
+    8 | def:pub ProductPage() -> JsxElement {
+      | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    9 |     has product: Any = None;
+   10 |     has loading: bool = True;
