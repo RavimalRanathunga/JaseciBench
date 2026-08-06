@@ -1,0 +1,107 @@
+{
+  "schema_version": "1",
+  "ui": {
+    "app_type": "ecommerce",
+    "nav_pattern": "topnav",
+    "pages": [
+      {
+        "name": "CatalogPage",
+        "route": "/",
+        "title": "Catalog"
+      },
+      {
+        "name": "ProductPage",
+        "route": "/product/:product_id",
+        "title": "Product"
+      },
+      {
+        "name": "CartPage",
+        "route": "/cart",
+        "title": "Cart"
+      },
+      {
+        "name": "OrdersPage",
+        "route": "/orders",
+        "title": "Orders"
+      },
+      {
+        "name": "SearchPage",
+        "route": "/search",
+        "title": "Search"
+      }
+    ],
+    "primitive_components": [
+      "button",
+      "card",
+      "input",
+      "badge",
+      "separator"
+    ],
+    "style": "nova",
+    "base_color": "neutral",
+    "theme": "indigo",
+    "font": "inter",
+    "radius": "medium",
+    "menu_accent": "subtle",
+    "auth_required": false,
+    "backend_required": true,
+    "ai_required": false
+  },
+  "files": [
+    {
+      "path": "services/orders.sv.jac",
+      "layer": "service",
+      "purpose": "Orders service; add total_revenue() endpoint to compute net revenue from payments and refunds across all orders.",
+      "exports": [
+        "list_orders",
+        "get_order",
+        "cancel_order",
+        "return_items",
+        "modify_order_items",
+        "update_order_address",
+        "update_order_status",
+        "total_revenue"
+      ],
+      "imports_from_plan": [],
+      "write_order": 1,
+      "status": "done"
+    },
+    {
+      "path": "main.jac",
+      "layer": "shell",
+      "purpose": "App entry point; register server endpoints including orders.total_revenue and mount client Shell.",
+      "exports": [
+        "app"
+      ],
+      "imports_from_plan": [
+        "total_revenue"
+      ],
+      "write_order": 2,
+      "status": "done"
+    }
+  ],
+  "write_order": [
+    "services/orders.sv.jac",
+    "main.jac"
+  ],
+  "dependency_graph": {
+    "main.jac": [
+      "services/orders.sv.jac"
+    ],
+    "services/orders.sv.jac": []
+  },
+  "remove_from_template": [],
+  "verify": {
+    "flow": "total_revenue",
+    "route": "/orders",
+    "steps": "Load /orders, then call the total_revenue endpoint (e.g., via service invocation) and confirm it returns a numeric net value based on existing Payment records (payments minus refunds)."
+  },
+  "build_log": {
+    "overall_status": "pending",
+    "last_action": "",
+    "issues": [],
+    "learnings": []
+  },
+  "confidence": 0.74,
+  "assumption": "Backend endpoint registration relies on importing total_revenue in main.jac like other def:pub service functions in this template."
+}
