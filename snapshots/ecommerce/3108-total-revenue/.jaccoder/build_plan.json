@@ -1,0 +1,129 @@
+{
+  "schema_version": "1",
+  "ui": {
+    "app_type": "ecommerce",
+    "nav_pattern": "topnav",
+    "pages": [
+      {
+        "name": "CatalogPage",
+        "route": "/",
+        "title": "Catalog"
+      },
+      {
+        "name": "ProductPage",
+        "route": "/products/:id",
+        "title": "Product"
+      },
+      {
+        "name": "CartPage",
+        "route": "/cart",
+        "title": "Cart"
+      },
+      {
+        "name": "OrdersPage",
+        "route": "/orders",
+        "title": "Orders"
+      },
+      {
+        "name": "SearchPage",
+        "route": "/search",
+        "title": "Search"
+      }
+    ],
+    "primitive_components": [
+      "button",
+      "card",
+      "input",
+      "badge",
+      "separator"
+    ],
+    "style": "nova",
+    "base_color": "gray",
+    "theme": "indigo",
+    "font": "inter",
+    "radius": "large",
+    "menu_accent": "subtle",
+    "auth_required": false,
+    "backend_required": true,
+    "ai_required": false
+  },
+  "files": [
+    {
+      "path": "services/orders.sv.jac",
+      "layer": "service",
+      "purpose": "Orders CRUD and lifecycle endpoints plus aggregate revenue computation across all payments/refunds.",
+      "exports": [
+        "list_orders",
+        "get_order",
+        "cancel_order",
+        "update_order_status",
+        "return_items",
+        "modify_order_items",
+        "update_order_address",
+        "total_revenue"
+      ],
+      "imports_from_plan": [
+        "ensure_seeded",
+        "find_variant",
+        "find_payment_method"
+      ],
+      "write_order": 1,
+      "status": "done"
+    },
+    {
+      "path": "pages/OrdersPage.cl.jac",
+      "layer": "page",
+      "purpose": "Orders list for the demo user, with cancel action and a displayed total revenue summary value.",
+      "exports": [
+        "OrdersPage"
+      ],
+      "imports_from_plan": [
+        "list_orders",
+        "cancel_order",
+        "total_revenue"
+      ],
+      "write_order": 2,
+      "status": "done"
+    },
+    {
+      "path": "main.jac",
+      "layer": "shell",
+      "purpose": "Application entry point that registers all public service endpoints used by the client.",
+      "exports": [
+        "app"
+      ],
+      "imports_from_plan": [
+        "total_revenue"
+      ],
+      "write_order": 3,
+      "status": "done"
+    }
+  ],
+  "write_order": [
+    "services/orders.sv.jac",
+    "pages/OrdersPage.cl.jac",
+    "main.jac"
+  ],
+  "dependency_graph": {
+    "pages/OrdersPage.cl.jac": [
+      "services/orders.sv.jac"
+    ],
+    "main.jac": [
+      "services/orders.sv.jac"
+    ]
+  },
+  "remove_from_template": [],
+  "verify": {
+    "flow": "total_revenue",
+    "route": "/orders",
+    "steps": "Navigate to /orders and confirm a Total revenue value renders (and matches payments minus refunds)."
+  },
+  "build_log": {
+    "overall_status": "pending",
+    "last_action": "",
+    "issues": [],
+    "learnings": []
+  },
+  "confidence": 0.74,
+  "assumption": "Payments and refunds are represented solely by Payment nodes attached to each Order with transaction_type values 'payment' or 'refund', and summing those amounts yields the intended total revenue."
+}
