@@ -1,0 +1,56 @@
+{
+  "schema_version": "1",
+  "ui": {
+    "app_type": "ecommerce",
+    "nav_pattern": "topnav",
+    "pages": [],
+    "primitive_components": [
+      "button",
+      "card",
+      "input"
+    ],
+    "style": "vega",
+    "base_color": "neutral",
+    "theme": "amber",
+    "font": "figtree",
+    "radius": "medium",
+    "menu_accent": "bold",
+    "design_rationale": "The existing e-commerce product-review context calls for a friendly consumer feel with a warm commerce palette, while this service-only change leaves the existing screens untouched.",
+    "auth_required": false,
+    "backend_required": true,
+    "ai_required": false
+  },
+  "files": [
+    {
+      "path": "services/reviews.sv.jac",
+      "layer": "service",
+      "purpose": "Update add_review so a missing product still returns 404 before ratings below 1 or above 5 return the specified 400 error.",
+      "exports": [
+        "add_review"
+      ],
+      "imports_from_plan": [],
+      "write_order": 1,
+      "status": "done"
+    }
+  ],
+  "write_order": [
+    "services/reviews.sv.jac"
+  ],
+  "dependency_graph": {
+    "services/reviews.sv.jac": []
+  },
+  "remove_from_template": [],
+  "verify": {
+    "flow": "add_review",
+    "route": "/products/:id",
+    "steps": "Call add_review for an existing product with a rating below 1 and above 5 and confirm each returns the specified 400 error; call it for a missing product with an out-of-range rating and confirm the existing 404 is returned first."
+  },
+  "build_log": {
+    "overall_status": "pending",
+    "last_action": "Planned the focused reviews service change.",
+    "issues": [],
+    "learnings": []
+  },
+  "confidence": 0.92,
+  "assumption": "The specified 400 error is already defined by the task's intended response contract; no additional UI or tests need to be changed for this service-only request."
+}

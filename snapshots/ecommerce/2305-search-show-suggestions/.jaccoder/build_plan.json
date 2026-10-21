@@ -1,0 +1,81 @@
+{
+  "schema_version": "1",
+  "ui": {
+    "app_type": "ecommerce",
+    "nav_pattern": "topnav",
+    "pages": [
+      {
+        "name": "SearchPage",
+        "route": "/search",
+        "title": "Search Products | Jac E-Commerce",
+        "purpose": "browse"
+      }
+    ],
+    "primitive_components": [
+      "button",
+      "input",
+      "card",
+      "badge"
+    ],
+    "style": "vega",
+    "base_color": "stone",
+    "theme": "amber",
+    "font": "figtree",
+    "radius": "medium",
+    "menu_accent": "bold",
+    "design_rationale": "The shopping search experience and friendly clickable product suggestions call for a warm, consumer-oriented amber palette with approachable typography.",
+    "auth_required": false,
+    "backend_required": true,
+    "ai_required": false
+  },
+  "files": [
+    {
+      "path": "services/catalog.sv.jac",
+      "layer": "service",
+      "purpose": "Add a public search_suggestions endpoint that returns the exact four suggested query strings.",
+      "exports": [
+        "search_suggestions"
+      ],
+      "imports_from_plan": [],
+      "write_order": 1,
+      "status": "done"
+    },
+    {
+      "path": "pages/SearchPage.cl.jac",
+      "layer": "page",
+      "purpose": "Fetch the suggested queries on mount and render clickable Try: suggestions that fill the search query.",
+      "exports": [
+        "SearchPage"
+      ],
+      "imports_from_plan": [
+        "search_suggestions"
+      ],
+      "write_order": 2,
+      "status": "pending"
+    }
+  ],
+  "write_order": [
+    "services/catalog.sv.jac",
+    "pages/SearchPage.cl.jac"
+  ],
+  "dependency_graph": {
+    "services/catalog.sv.jac": [],
+    "pages/SearchPage.cl.jac": [
+      "services/catalog.sv.jac"
+    ]
+  },
+  "remove_from_template": [],
+  "verify": {
+    "flow": "search_suggestions",
+    "route": "/search",
+    "steps": "Open Search and confirm the four Try: suggestions appear; click one and verify its text fills the search query input."
+  },
+  "build_log": {
+    "overall_status": "pending",
+    "last_action": "Created a focused feature plan for suggestions endpoint and SearchPage mount integration.",
+    "issues": [],
+    "learnings": []
+  },
+  "confidence": 0.94,
+  "assumption": "The current app shell and all other routes remain unchanged; only the existing catalog service and SearchPage require edits."
+}

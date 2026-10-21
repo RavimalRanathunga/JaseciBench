@@ -1,0 +1,101 @@
+{
+  "schema_version": "1",
+  "ui": {
+    "app_type": "ecommerce",
+    "nav_pattern": "topnav",
+    "pages": [
+      {
+        "name": "ProductPage",
+        "route": "/products/:id",
+        "title": "Product Details",
+        "purpose": "focus"
+      }
+    ],
+    "primitive_components": ["button", "card", "badge"],
+    "style": "vega",
+    "base_color": "stone",
+    "theme": "amber",
+    "font": "figtree",
+    "radius": "large",
+    "menu_accent": "bold",
+    "design_rationale": "The product-detail and variant-stock context of an ecommerce storefront calls for a warm, consumer-friendly amber palette with approachable typography.",
+    "auth_required": false,
+    "backend_required": true,
+    "ai_required": false
+  },
+  "files": [
+    {
+      "path": "services/catalog.sv.jac",
+      "layer": "service",
+      "purpose": "Provides product detail data, including the variants and stock quantities needed to compute total stock.",
+      "exports": ["get_product"],
+      "imports_from_plan": [],
+      "write_order": 1,
+      "status": "done"
+    },
+    {
+      "path": "services/cart.sv.jac",
+      "layer": "service",
+      "purpose": "Provides the existing add-to-cart action available from the product detail screen.",
+      "exports": ["add_to_cart"],
+      "imports_from_plan": [],
+      "write_order": 2,
+      "status": "done"
+    },
+    {
+      "path": "pages/ProductPage.cl.jac",
+      "layer": "page",
+      "purpose": "Shows loaded product details, the sum of variant stock quantities between the description and variants list, and the existing variant selection and add-to-cart controls.",
+      "exports": ["ProductPage"],
+      "imports_from_plan": ["get_product", "add_to_cart"],
+      "write_order": 3,
+      "status": "pending"
+    },
+    {
+      "path": "frontend.cl.jac",
+      "layer": "shell",
+      "purpose": "Owns the storefront router and mounts the product detail route alongside the existing storefront routes.",
+      "exports": ["Shell"],
+      "imports_from_plan": ["ProductPage"],
+      "write_order": 4,
+      "status": "done"
+    },
+    {
+      "path": "main.jac",
+      "layer": "shell",
+      "purpose": "Registers server endpoints and mounts the existing storefront shell as the application entry point.",
+      "exports": ["app"],
+      "imports_from_plan": ["Shell"],
+      "write_order": 5,
+      "status": "done"
+    }
+  ],
+  "write_order": [
+    "services/catalog.sv.jac",
+    "services/cart.sv.jac",
+    "pages/ProductPage.cl.jac",
+    "frontend.cl.jac",
+    "main.jac"
+  ],
+  "dependency_graph": {
+    "services/catalog.sv.jac": [],
+    "services/cart.sv.jac": [],
+    "pages/ProductPage.cl.jac": ["services/catalog.sv.jac", "services/cart.sv.jac"],
+    "frontend.cl.jac": ["pages/ProductPage.cl.jac"],
+    "main.jac": ["frontend.cl.jac"]
+  },
+  "remove_from_template": [],
+  "verify": {
+    "flow": "add_to_cart",
+    "route": "/products/:id",
+    "steps": "Open a product with variants and confirm the total stock appears after its description and before the variants list only after the product loads; select a variant and add it to the cart."
+  },
+  "build_log": {
+    "overall_status": "pending",
+    "last_action": "Reconstructed the update contract because no prior build_plan.json existed.",
+    "issues": [],
+    "learnings": []
+  },
+  "confidence": 0.94,
+  "assumption": "The existing product endpoint already returns each variant's stock_qty, so the requested total can be calculated in ProductPage without a backend change."
+}

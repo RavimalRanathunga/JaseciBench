@@ -1,0 +1,84 @@
+{
+  "schema_version": "1",
+  "ui": {
+    "app_type": "ecommerce",
+    "nav_pattern": "topnav",
+    "pages": [],
+    "primitive_components": [],
+    "style": "nova",
+    "base_color": "neutral",
+    "theme": "blue",
+    "font": "inter",
+    "radius": "default",
+    "menu_accent": "subtle",
+    "design_rationale": "The request adds an order-count lookup to an existing ecommerce backend, so a restrained blue and neutral system fits the app without introducing a new interface.",
+    "auth_required": false,
+    "backend_required": true,
+    "ai_required": false
+  },
+  "files": [
+    {
+      "path": "services/orders.sv.jac",
+      "layer": "service",
+      "purpose": "Add the public user_with_most_orders endpoint to calculate and return the user ID associated with the greatest number of orders.",
+      "exports": [
+        "user_with_most_orders"
+      ],
+      "imports_from_plan": [],
+      "write_order": 1,
+      "status": "done"
+    },
+    {
+      "path": "main.jac",
+      "layer": "shell",
+      "purpose": "Register the new orders endpoint with the existing application API without changing its routed ecommerce UI.",
+      "exports": [
+        "app"
+      ],
+      "imports_from_plan": [
+        "user_with_most_orders"
+      ],
+      "write_order": 2,
+      "status": "done"
+    },
+    {
+      "path": "tests/baseline.jac",
+      "layer": "component",
+      "purpose": "Import and test user_with_most_orders against the seeded order graph, including that the returned ID belongs to a user with the maximal order count.",
+      "exports": [],
+      "imports_from_plan": [
+        "user_with_most_orders"
+      ],
+      "write_order": 3,
+      "status": "done"
+    }
+  ],
+  "write_order": [
+    "services/orders.sv.jac",
+    "main.jac",
+    "tests/baseline.jac"
+  ],
+  "dependency_graph": {
+    "services/orders.sv.jac": [],
+    "main.jac": [
+      "services/orders.sv.jac"
+    ],
+    "tests/baseline.jac": [
+      "services/orders.sv.jac"
+    ]
+  },
+  "remove_from_template": [],
+  "verify": {
+    "flow": "user_with_most_orders",
+    "route": "/",
+    "steps": "Call the registered user_with_most_orders endpoint and confirm it returns the user_id belonging to a user with the highest order count in the seeded graph."
+  },
+  "build_log": {
+    "overall_status": "pending",
+    "last_action": "Prepared the dependency-aware plan for the orders endpoint and its coverage.",
+    "issues": [],
+    "learnings": []
+  },
+  "confidence": 0.91,
+  "assumption": "The endpoint should be registered in main.jac so it is exposed like the existing public ecommerce service functions."
+}

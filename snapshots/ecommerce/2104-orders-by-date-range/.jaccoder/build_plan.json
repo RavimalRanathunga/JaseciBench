@@ -1,0 +1,71 @@
+{
+  "schema_version": "1",
+  "ui": {
+    "app_type": "ecommerce",
+    "nav_pattern": "topnav",
+    "pages": [
+      {
+        "name": "OrdersPage",
+        "route": "/orders",
+        "title": "Your Orders | Jac E-Commerce",
+        "purpose": "browse"
+      }
+    ],
+    "primitive_components": [
+      "card",
+      "button",
+      "badge",
+      "input",
+      "field"
+    ],
+    "style": "vega",
+    "base_color": "stone",
+    "theme": "amber",
+    "font": "figtree",
+    "radius": "medium",
+    "menu_accent": "bold",
+    "design_rationale": "The requested date-range filtering belongs to a consumer order-history flow, so warm stone surfaces, amber accents, and friendly Figtree typography fit the ecommerce context.",
+    "auth_required": false,
+    "backend_required": true,
+    "ai_required": false
+  },
+  "files": [
+    {
+      "path": "services/orders.sv.jac",
+      "layer": "service",
+      "purpose": "Extend list_orders with optional inclusive created_at timestamp bounds while preserving the existing user filter, returned order fields, and behavior when bounds are omitted.",
+      "exports": [
+        "list_orders",
+        "get_order",
+        "cancel_order",
+        "return_items",
+        "modify_order_items",
+        "update_order_address",
+        "update_order_status"
+      ],
+      "imports_from_plan": [],
+      "write_order": 1,
+      "status": "done"
+    }
+  ],
+  "write_order": [
+    "services/orders.sv.jac"
+  ],
+  "dependency_graph": {
+    "services/orders.sv.jac": []
+  },
+  "remove_from_template": [],
+  "verify": {
+    "flow": "list_orders",
+    "route": "/orders",
+    "steps": "Call list_orders with from_date and to_date and confirm results include orders created exactly at either boundary, exclude orders outside the range, and remain unchanged when both optional arguments are omitted."
+  },
+  "build_log": {
+    "overall_status": "pending",
+    "last_action": "",
+    "issues": [],
+    "learnings": []
+  },
+  "confidence": 0.92,
+  "assumption": "The endpoint should compare the timestamp strings in their existing created_at representation, with inclusive lower and upper bounds and no parsing or validation behavior beyond the requested filtering."
+}

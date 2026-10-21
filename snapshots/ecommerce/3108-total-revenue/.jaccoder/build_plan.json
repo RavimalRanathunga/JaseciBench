@@ -1,0 +1,52 @@
+{
+  "schema_version": "1",
+  "ui": {
+    "app_type": "ecommerce",
+    "nav_pattern": "topnav",
+    "pages": [],
+    "primitive_components": [],
+    "style": "lyra",
+    "base_color": "neutral",
+    "theme": "blue",
+    "font": "inter",
+    "radius": "default",
+    "menu_accent": "subtle",
+    "design_rationale": "The request adds an orders-wide revenue calculation to an ecommerce app, so a restrained blue finance-oriented data style fits without changing existing screens.",
+    "auth_required": false,
+    "backend_required": true,
+    "ai_required": false
+  },
+  "files": [
+    {
+      "path": "services/orders.sv.jac",
+      "layer": "service",
+      "purpose": "Add total_revenue(), summing payment transaction amounts and subtracting refund transaction amounts across every order.",
+      "exports": [
+        "total_revenue"
+      ],
+      "imports_from_plan": [],
+      "write_order": 1,
+      "status": "done"
+    }
+  ],
+  "write_order": [
+    "services/orders.sv.jac"
+  ],
+  "dependency_graph": {
+    "services/orders.sv.jac": []
+  },
+  "remove_from_template": [],
+  "verify": {
+    "flow": "total_revenue",
+    "route": "/orders",
+    "steps": "Call the orders service total_revenue endpoint and confirm it returns the sum of all payment amounts minus all refund amounts across every order."
+  },
+  "build_log": {
+    "overall_status": "pending",
+    "last_action": "",
+    "issues": [],
+    "learnings": []
+  },
+  "confidence": 0.95,
+  "assumption": "The existing seeded order and payment graph is the source of truth, so total_revenue should aggregate persisted Payment nodes across all orders without changing the UI."
+}
