@@ -1,0 +1,65 @@
+{
+  "schema_version": "1",
+  "ui": {
+    "app_type": "ecommerce",
+    "nav_pattern": "topnav",
+    "pages": [
+      {
+        "name": "OrdersPage",
+        "route": "/orders",
+        "title": "Your Orders | Jac E-Commerce",
+        "purpose": "browse"
+      }
+    ],
+    "primitive_components": [
+      "card",
+      "badge",
+      "button",
+      "field",
+      "input"
+    ],
+    "style": "vega",
+    "base_color": "stone",
+    "theme": "amber",
+    "font": "figtree",
+    "radius": "medium",
+    "menu_accent": "bold",
+    "design_rationale": "The request concerns browsing ecommerce orders and applying an optional date range, so a warm, consumer-oriented amber palette and friendly Figtree typography fit the shopping context.",
+    "auth_required": false,
+    "backend_required": true,
+    "ai_required": false
+  },
+  "files": [
+    {
+      "path": "services/orders.sv.jac",
+      "layer": "service",
+      "purpose": "Extend list_orders with optional ISO timestamp bounds while preserving the existing user filtering, default behavior, and returned order dictionaries.",
+      "exports": [
+        "list_orders"
+      ],
+      "imports_from_plan": [],
+      "write_order": 1,
+      "status": "done"
+    }
+  ],
+  "write_order": [
+    "services/orders.sv.jac"
+  ],
+  "dependency_graph": {
+    "services/orders.sv.jac": []
+  },
+  "remove_from_template": [],
+  "verify": {
+    "flow": "list_orders",
+    "route": "/orders",
+    "steps": "Call list_orders with an ISO from_date and to_date, then confirm the returned orders are within the inclusive range and retain their existing dict fields; call without dates and confirm the existing results remain unchanged."
+  },
+  "build_log": {
+    "overall_status": "pending",
+    "last_action": "Created a focused plan for the existing list_orders endpoint change.",
+    "issues": [],
+    "learnings": []
+  },
+  "confidence": 0.93,
+  "assumption": "The ISO bounds should filter on each order's created_at timestamp and be inclusive when supplied, while absent bounds leave existing selection behavior unchanged."
+}

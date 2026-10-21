@@ -1,0 +1,81 @@
+{
+  "schema_version": "1",
+  "ui": {
+    "app_type": "ecommerce",
+    "nav_pattern": "topnav",
+    "pages": [
+      {
+        "name": "SearchPage",
+        "route": "/search",
+        "title": "Search Products | Jac E-Commerce",
+        "purpose": "browse"
+      }
+    ],
+    "primitive_components": [
+      "button",
+      "input",
+      "card",
+      "badge"
+    ],
+    "style": "vega",
+    "base_color": "neutral",
+    "theme": "amber",
+    "font": "figtree",
+    "radius": "medium",
+    "menu_accent": "bold",
+    "design_rationale": "The ecommerce search experience and requested popular product terms call for a friendly, consumer-oriented amber-accented style with approachable typography.",
+    "auth_required": false,
+    "backend_required": true,
+    "ai_required": false
+  },
+  "files": [
+    {
+      "path": "services/catalog.sv.jac",
+      "layer": "service",
+      "purpose": "Add the public trending_searches endpoint returning the requested trending product terms.",
+      "exports": [
+        "trending_searches"
+      ],
+      "imports_from_plan": [],
+      "write_order": 1,
+      "status": "done"
+    },
+    {
+      "path": "pages/SearchPage.cl.jac",
+      "layer": "page",
+      "purpose": "Display the existing product search experience with the service-provided terms under the literal Trending: label.",
+      "exports": [
+        "SearchPage"
+      ],
+      "imports_from_plan": [
+        "trending_searches"
+      ],
+      "write_order": 2,
+      "status": "pending"
+    }
+  ],
+  "write_order": [
+    "services/catalog.sv.jac",
+    "pages/SearchPage.cl.jac"
+  ],
+  "dependency_graph": {
+    "services/catalog.sv.jac": [],
+    "pages/SearchPage.cl.jac": [
+      "services/catalog.sv.jac"
+    ]
+  },
+  "remove_from_template": [],
+  "verify": {
+    "flow": "trending_searches",
+    "route": "/search",
+    "steps": "Open Search Products and confirm the Trending: label is followed by bag, headphones, and watch."
+  },
+  "build_log": {
+    "overall_status": "pending",
+    "last_action": "Planned the trending-search service and SearchPage integration.",
+    "issues": [],
+    "learnings": []
+  },
+  "confidence": 0.94,
+  "assumption": "The existing SearchPage route and product search behavior remain unchanged; only trending terms are added to its current view."
+}

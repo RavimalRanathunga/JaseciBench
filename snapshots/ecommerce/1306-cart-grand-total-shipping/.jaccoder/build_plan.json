@@ -1,0 +1,88 @@
+{
+  "schema_version": "1",
+  "ui": {
+    "app_type": "ecommerce",
+    "nav_pattern": "topnav",
+    "pages": [
+      {
+        "name": "CartPage",
+        "route": "/cart",
+        "title": "Shopping Cart | Jac E-Commerce",
+        "purpose": "browse"
+      }
+    ],
+    "primitive_components": [
+      "card",
+      "button",
+      "badge"
+    ],
+    "style": "vega",
+    "base_color": "neutral",
+    "theme": "amber",
+    "font": "figtree",
+    "radius": "medium",
+    "menu_accent": "bold",
+    "design_rationale": "The requested cart shipping and grand-total breakdown is a direct, scannable shopping summary, so a friendly consumer style with warm commerce accents fits the ecommerce context.",
+    "auth_required": false,
+    "backend_required": true,
+    "ai_required": false
+  },
+  "files": [
+    {
+      "path": "services/cart.sv.jac",
+      "layer": "service",
+      "purpose": "Return cart items with a quantity-aware subtotal, conditional 5.99 shipping, and a two-decimal grand_total from get_cart.",
+      "exports": [
+        "get_cart",
+        "add_to_cart",
+        "update_cart_item",
+        "remove_from_cart",
+        "clear_cart",
+        "checkout"
+      ],
+      "imports_from_plan": [],
+      "write_order": 1,
+      "status": "done"
+    },
+    {
+      "path": "pages/CartPage.cl.jac",
+      "layer": "page",
+      "purpose": "Keep the existing cart browsing and checkout screen, displaying Subtotal, Shipping, and a prominent bold Grand total from the cart response.",
+      "exports": [
+        "CartPage"
+      ],
+      "imports_from_plan": [
+        "get_cart",
+        "update_cart_item",
+        "remove_from_cart",
+        "checkout"
+      ],
+      "write_order": 2,
+      "status": "pending"
+    }
+  ],
+  "write_order": [
+    "services/cart.sv.jac",
+    "pages/CartPage.cl.jac"
+  ],
+  "dependency_graph": {
+    "services/cart.sv.jac": [],
+    "pages/CartPage.cl.jac": [
+      "services/cart.sv.jac"
+    ]
+  },
+  "remove_from_template": [],
+  "verify": {
+    "flow": "add_to_cart",
+    "route": "/cart",
+    "steps": "Add a product to the cart, open the cart, and confirm the subtotal is quantity-aware, shipping is $5.99, and the bold grand total equals their sum rounded to two decimals."
+  },
+  "build_log": {
+    "overall_status": "pending",
+    "last_action": "Updated the plan for cart shipping and grand-total display.",
+    "issues": [],
+    "learnings": []
+  },
+  "confidence": 0.94,
+  "assumption": "The existing checkout total/payment behavior remains unchanged; the requested shipping calculation and display apply to get_cart's cart summary only."
+}

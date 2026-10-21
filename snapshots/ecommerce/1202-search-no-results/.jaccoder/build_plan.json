@@ -1,0 +1,55 @@
+{
+  "schema_version": "1",
+  "ui": {
+    "app_type": "ecommerce",
+    "nav_pattern": "topnav",
+    "pages": [
+      {
+        "name": "SearchPage",
+        "route": "/search",
+        "title": "Search Products",
+        "purpose": "browse"
+      }
+    ],
+    "primitive_components": ["input", "button", "card"],
+    "style": "nova",
+    "base_color": "neutral",
+    "theme": "indigo",
+    "font": "inter",
+    "radius": "default",
+    "menu_accent": "subtle",
+    "design_rationale": "The request targets a no-results message on an existing ecommerce search screen, so retain its neutral, indigo-accented product-search presentation rather than redesigning it.",
+    "auth_required": false,
+    "backend_required": true,
+    "ai_required": false
+  },
+  "files": [
+    {
+      "path": "pages/SearchPage.cl.jac",
+      "layer": "page",
+      "purpose": "Show the existing search form and results unchanged, displaying the requested query-specific message only after a completed search returns no products.",
+      "exports": ["SearchPage"],
+      "imports_from_plan": [],
+      "write_order": 1,
+      "status": "pending"
+    }
+  ],
+  "write_order": ["pages/SearchPage.cl.jac"],
+  "dependency_graph": {
+    "pages/SearchPage.cl.jac": []
+  },
+  "remove_from_template": [],
+  "verify": {
+    "flow": "search_products",
+    "route": "/search",
+    "steps": "Submit a query that matches no products and confirm that after searching finishes the page shows No products match followed by the submitted query in quotation marks, without changing loading or result-grid behavior."
+  },
+  "build_log": {
+    "overall_status": "pending",
+    "last_action": "Planned the isolated no-results message fix in the existing search page.",
+    "issues": [],
+    "learnings": []
+  },
+  "confidence": 0.97,
+  "assumption": "The existing SearchPage route, search_products service, and its loading and result-grid behavior remain intact; only the completed empty-results state needs a message."
+}

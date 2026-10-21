@@ -1,0 +1,111 @@
+{
+  "schema_version": "1",
+  "ui": {
+    "app_type": "ecommerce",
+    "nav_pattern": "topnav",
+    "pages": [
+      {
+        "name": "CatalogPage",
+        "route": "/",
+        "title": "Catalog | Jac E-Commerce",
+        "purpose": "browse"
+      },
+      {
+        "name": "ProductPage",
+        "route": "/products/:id",
+        "title": "Product | Jac E-Commerce",
+        "purpose": "focus"
+      },
+      {
+        "name": "CartPage",
+        "route": "/cart",
+        "title": "Shopping Cart | Jac E-Commerce",
+        "purpose": "focus"
+      },
+      {
+        "name": "OrdersPage",
+        "route": "/orders",
+        "title": "Your Orders | Jac E-Commerce",
+        "purpose": "browse"
+      },
+      {
+        "name": "SearchPage",
+        "route": "/search",
+        "title": "Search Products | Jac E-Commerce",
+        "purpose": "browse"
+      }
+    ],
+    "primitive_components": [
+      "button",
+      "card",
+      "input"
+    ],
+    "style": "vega",
+    "base_color": "stone",
+    "theme": "amber",
+    "font": "figtree",
+    "radius": "medium",
+    "menu_accent": "bold",
+    "design_rationale": "The existing ecommerce storefront and this request's payment-and-refund revenue total call for a warm, approachable commerce palette with clear financial readability.",
+    "auth_required": false,
+    "backend_required": true,
+    "ai_required": false
+  },
+  "files": [
+    {
+      "path": "models.jac",
+      "layer": "service",
+      "purpose": "Existing graph model declarations, including Payment records used by the revenue aggregate.",
+      "exports": [
+        "Payment"
+      ],
+      "imports_from_plan": [],
+      "write_order": 1,
+      "status": "done"
+    },
+    {
+      "path": "services/orders.sv.jac",
+      "layer": "service",
+      "purpose": "Add total_revenue() -> float to aggregate amounts from every payment transaction minus every refund transaction across all orders, preserving existing order operations.",
+      "exports": [
+        "list_orders",
+        "get_order",
+        "cancel_order",
+        "return_items",
+        "modify_order_items",
+        "update_order_address",
+        "update_order_status",
+        "total_revenue"
+      ],
+      "imports_from_plan": [
+        "Payment"
+      ],
+      "write_order": 2,
+      "status": "done"
+    }
+  ],
+  "write_order": [
+    "models.jac",
+    "services/orders.sv.jac"
+  ],
+  "dependency_graph": {
+    "models.jac": [],
+    "services/orders.sv.jac": [
+      "models.jac"
+    ]
+  },
+  "remove_from_template": [],
+  "verify": {
+    "flow": "total_revenue",
+    "route": "/orders",
+    "steps": "Call total_revenue() and confirm its float equals the sum of amounts for every payment transaction minus the sum for every refund transaction across all orders."
+  },
+  "build_log": {
+    "overall_status": "pending",
+    "last_action": "Updated the orders service contract to include the net payment/refund revenue aggregate.",
+    "issues": [],
+    "learnings": []
+  },
+  "confidence": 0.9,
+  "assumption": "Revenue is the net sum of all Payment graph nodes across all orders, treating transaction_type payment as positive and refund as negative regardless of order status."
+}

@@ -1,0 +1,105 @@
+{
+  "schema_version": "1",
+  "ui": {
+    "app_type": "ecommerce",
+    "nav_pattern": "topnav",
+    "pages": [
+      {
+        "name": "CatalogPage",
+        "route": "/",
+        "title": "Jac E-Commerce",
+        "purpose": "browse"
+      },
+      {
+        "name": "ProductPage",
+        "route": "/products/:id",
+        "title": "Product",
+        "purpose": "focus"
+      },
+      {
+        "name": "CartPage",
+        "route": "/cart",
+        "title": "Shopping Cart",
+        "purpose": "focus"
+      },
+      {
+        "name": "OrdersPage",
+        "route": "/orders",
+        "title": "Orders",
+        "purpose": "browse"
+      },
+      {
+        "name": "SearchPage",
+        "route": "/search",
+        "title": "Search Products",
+        "purpose": "browse"
+      }
+    ],
+    "primitive_components": [
+      "button",
+      "card",
+      "input",
+      "badge"
+    ],
+    "style": "vega",
+    "base_color": "stone",
+    "theme": "amber",
+    "font": "figtree",
+    "radius": "medium",
+    "menu_accent": "bold",
+    "design_rationale": "The existing ecommerce catalog and shopping flows call for a warm, approachable consumer storefront; this backend-only endpoint change leaves the existing visual design intact.",
+    "auth_required": false,
+    "backend_required": true,
+    "ai_required": false
+  },
+  "files": [
+    {
+      "path": "services/orders.sv.jac",
+      "layer": "service",
+      "purpose": "Add the public user_with_most_orders() endpoint that returns the user ID with the greatest number of orders.",
+      "exports": [
+        "user_with_most_orders"
+      ],
+      "imports_from_plan": [],
+      "write_order": 1,
+      "status": "done"
+    },
+    {
+      "path": "main.jac",
+      "layer": "shell",
+      "purpose": "Register the new orders endpoint in the app's public server endpoint imports without altering the existing routes.",
+      "exports": [
+        "app"
+      ],
+      "imports_from_plan": [
+        "user_with_most_orders"
+      ],
+      "write_order": 2,
+      "status": "done"
+    }
+  ],
+  "write_order": [
+    "services/orders.sv.jac",
+    "main.jac"
+  ],
+  "dependency_graph": {
+    "services/orders.sv.jac": [],
+    "main.jac": [
+      "services/orders.sv.jac"
+    ]
+  },
+  "remove_from_template": [],
+  "verify": {
+    "flow": "user_with_most_orders",
+    "route": "/",
+    "steps": "Call the public user_with_most_orders endpoint and verify it returns the user_id string for a user with the highest order count."
+  },
+  "build_log": {
+    "overall_status": "pending",
+    "last_action": "",
+    "issues": [],
+    "learnings": []
+  },
+  "confidence": 0.94,
+  "assumption": "The endpoint should be exposed through the existing orders service and registered among main.jac's public endpoint imports, with no frontend changes."
+}

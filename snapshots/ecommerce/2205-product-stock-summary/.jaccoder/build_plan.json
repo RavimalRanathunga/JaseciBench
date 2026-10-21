@@ -1,0 +1,57 @@
+{
+  "schema_version": "1",
+  "ui": {
+    "app_type": "ecommerce",
+    "nav_pattern": "topnav",
+    "pages": [
+      {
+        "name": "ProductPage",
+        "route": "/products/:id",
+        "title": "Product Details",
+        "purpose": "focus"
+      }
+    ],
+    "primitive_components": [],
+    "style": "vega",
+    "base_color": "stone",
+    "theme": "amber",
+    "font": "figtree",
+    "radius": "medium",
+    "menu_accent": "bold",
+    "design_rationale": "The requested product detail inventory summary belongs on the existing consumer shopping screen, so the warm commerce palette complements the product-focused content.",
+    "auth_required": false,
+    "backend_required": true,
+    "ai_required": false
+  },
+  "files": [
+    {
+      "path": "pages/ProductPage.cl.jac",
+      "layer": "page",
+      "purpose": "Update the existing product detail page to show the sum of variant stock quantities as '<number> total in stock' between the description and variants, only after a product loads.",
+      "exports": ["ProductPage"],
+      "imports_from_plan": [],
+      "write_order": 1,
+      "status": "pending"
+    }
+  ],
+  "write_order": [
+    "pages/ProductPage.cl.jac"
+  ],
+  "dependency_graph": {
+    "pages/ProductPage.cl.jac": []
+  },
+  "remove_from_template": [],
+  "verify": {
+    "flow": "add_to_cart",
+    "route": "/products/<existing-product-id>",
+    "steps": "Open a product with variants and confirm the total of their stock_qty values appears as '<number> total in stock' after the description and before Variants; add the selected variant to the cart and confirm the success feedback appears."
+  },
+  "build_log": {
+    "overall_status": "pending",
+    "last_action": "Created incremental build contract for the existing ProductPage stock total display.",
+    "issues": [],
+    "learnings": []
+  },
+  "confidence": 0.96,
+  "assumption": "The existing catalog endpoint supplies the loaded product's variants including each stock_qty, so the total can be computed locally without changing the service or app shell."
+}
